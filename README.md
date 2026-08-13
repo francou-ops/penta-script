@@ -3,9 +3,9 @@
 ## Integrantes y roles (Sprint actual)
 |      Nombre       |   rol ágil   |
 |Cristóbal Dapellus | Product owner|
-|Benjamin Pedraza   | QA           |
+|Benjamín Pedraza   | QA           |
 |José Sepúlveda     | Dev          |
-|Josefa sotomayor   | Dev          |
+|Josefa Sotomayor   | Dev          |
 |Franco Lillo       | Scrum Master |
 
 ## Descripción Breve
