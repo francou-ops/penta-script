@@ -6,7 +6,7 @@
 |Benjamin Pedraza   | QA           |
 |Jose Sepulveda     | Dev          |
 |Josefa sotomayor   | Dev          |
-|franco Lillo       | Scrum Master |
+|Franco Lillo       | Scrum Master |
 
 ## Descripción Breve
 > Crear una pagina web para "EcoRuta"
@@ -33,9 +33,9 @@ npm run dev
 - Sprint actual: Sprint 0 (Kickoff)
 - Última actualización: (fecha)
 
-## Tablero Kanban
+## Tablero Trello
 
-Enlace al tablero: (agregar enlace)
+Enlace al tablero: https://trello.com/invite/b/6a7dd52a07f114b0a6bcf699/ATTI93ae13e617f43c9826d1f56f0a1e4919190137FE/penta-script
 
 
 ## Enlace de despliegue
