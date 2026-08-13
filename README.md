@@ -4,7 +4,7 @@
 |      Nombre       |   rol ágil   |
 |Cristóbal Dapellus | Product owner|
 |Benjamin Pedraza   | QA           |
-|Jose Sepulveda     | Dev          |
+|José Sepúlveda     | Dev          |
 |Josefa sotomayor   | Dev          |
 |Franco Lillo       | Scrum Master |
 
