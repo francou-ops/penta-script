@@ -1,12 +1,12 @@
 # penta-script
 
-## Integrantes y roles (Sprint actual)
-|      Nombre       |   rol ágil   |
-|Cristóbal Dapellus | Product owner|
-|Benjamín Pedraza   | QA           |
-|José Sepúlveda     | Dev          |
-|Josefa Sotomayor   | Dev          |
-|Franco Lillo       | Scrum Master |
+## Integrantes y roles (Sprint actual) 
+|      Nombre         |   rol ágil   |
+|Franco Lillo         | Product owner|
+|Cristóbal Dapellus   | QA           |
+|Benjamín Pedraza     | Dev          |
+|José Sepúlveda       | Dev          |
+|Josefa Sotomayor     | Scrum Master |
 
 ## Descripción Breve
 > Crear una pagina web para "EcoRuta"
