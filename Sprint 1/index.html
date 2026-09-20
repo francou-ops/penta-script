@@ -12,33 +12,34 @@
 </head>
 
 <body>
-  <header>
-    <a href="#contenido-principal">Saltar al contenido principal</a>
+  <header class="site-header">
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
-    <nav aria-label="Navegación principal">
-      <a href="#" aria-label="Ir al inicio de EcoRuta Temuco">
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand" href="#" aria-label="Ir al inicio de EcoRuta Temuco">
         EcoRuta
       </a>
 
-      <ul>
+      <ul class="nav-links">
         <li><a href="#" aria-current="page">Inicio</a></li>
         <li><a href="#rutas">Rutas</a></li>
+        <li><a href="Archivo/taller_1.html">Lugares</a></li>
         <li><a href="#emprendimientos">Emprendimientos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
 
-      <a href="#emergencia">Emergencia</a>
+      <a class="emergency-link" href="#emergencia">Emergencia</a>
     </nav>
   </header>
 
-  <main id="contenido-principal">
-    <section aria-labelledby="titulo-principal">
+  <main tabindex="-1" id="contenido-principal">
+    <section class="hero" aria-labelledby="titulo-principal">
       <p>Región de La Araucanía</p>
       <h1 id="titulo-principal">
         Descubre la Araucanía sustentable
       </h1>
 
-      <div aria-label="Filtrar rutas por dificultad">
+      <div class="route-filters" aria-label="Filtrar rutas por dificultad">
         <button type="button">Todas</button>
         <button type="button">Fácil</button>
         <button type="button">Moderada</button>
@@ -46,10 +47,10 @@
       </div>
     </section>
 
-    <section id="rutas" aria-labelledby="titulo-rutas">
+    <section class="route-layout" id="rutas" aria-labelledby="titulo-rutas">
       <h2 id="titulo-rutas">Ruta destacada</h2>
 
-      <article>
+      <article class="route-card">
         <img
           src="../Archivo/paisaje-ecoruta.jpg"
           alt="Paisaje natural de una ruta en La Araucanía"
@@ -59,7 +60,7 @@
         <h3>Sendero Volcán Villarrica</h3>
         <p><strong>Dificultad:</strong> Moderada</p>
 
-        <dl>
+        <dl class="route-facts">
           <div>
             <dt>Distancia</dt>
             <dd>12 km</dd>
@@ -77,14 +78,14 @@
         </dl>
       </article>
 
-      <aside aria-label="Información para realizar la ruta">
-        <section aria-labelledby="titulo-clima">
+      <aside class="route-sidebar" aria-label="Información para realizar la ruta">
+        <section class="weather-card" aria-labelledby="titulo-clima">
           <h2 id="titulo-clima">Clima</h2>
           <p><strong>22 °C</strong></p>
           <p>Soleado, Pucón</p>
         </section>
 
-        <section id="emergencia" aria-labelledby="titulo-emergencia">
+        <section class="emergency-card" id="emergencia" aria-labelledby="titulo-emergencia">
           <h2 id="titulo-emergencia">Contacto de emergencia</h2>
           <p>
             Comunícate con los servicios de emergencia si ocurre
@@ -96,6 +97,7 @@
     </section>
 
     <section
+      class="business-grid"
       id="emprendimientos"
       aria-labelledby="titulo-emprendimientos"
     >
@@ -103,41 +105,41 @@
         Tiendas y servicios cercanos
       </h2>
 
-      <article>
+      <article class="business-card">
         <p>Artesanía local</p>
         <h3>Artesanías Pucón</h3>
       </article>
 
-      <article>
+      <article class="business-card">
         <p>Arriendo de equipo</p>
         <h3>Equipamiento Trekking</h3>
       </article>
 
-      <article>
+      <article class="business-card">
         <p>Guía certificado</p>
         <h3>Guías Araucanía</h3>
       </article>
     </section>
 
-    <section aria-labelledby="titulo-opiniones">
+    <section class="reviews" aria-labelledby="titulo-opiniones">
       <h2 id="titulo-opiniones">Valoraciones y opiniones</h2>
       <p aria-label="Valoración de 4.7 de 5 estrellas">
         4.7 de 5, basado en comentarios de visitantes
       </p>
 
-      <article>
+      <article class="review-card">
         <h3>Usuario 1</h3>
         <p>Excelente ruta, muy limpia y bien señalizada.</p>
       </article>
 
-      <article>
+      <article class="review-card">
         <h3>Usuario 2</h3>
         <p>Hermosa vista al volcán, recomendada para familias.</p>
       </article>
     </section>
   </main>
 
-  <footer id="contacto">
+  <footer class="site-footer" id="contacto">
     <p>
       EcoRuta Temuco — Turismo sustentable y accesible
     </p>
