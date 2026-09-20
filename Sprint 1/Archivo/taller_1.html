@@ -4,65 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoRuta</title>
-  <link rel="stylesheet" href="06_starter.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<body class="place-page">
+  <a class="skip-link" href="#contenido-lugar">Saltar al contenido principal</a>
 
-  <header>
+  <header class="place-header">
     <h1>EcoRuta</h1>
   </header>
 
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Lugares</a>
-    <a href="#">Pymes</a>
+  <nav class="place-nav" aria-label="Navegación principal">
+    <a href="../index.html">Inicio</a>
+    <a href="#contenido-lugar" aria-current="page">Lugares</a>
+    <a href="../index.html#emprendimientos">Pymes</a>
   </nav>
 
-  <main>
-    <section>
-      <article>
+  <main tabindex="-1" class="place-layout" id="contenido-lugar">
+    <section class="place-content" aria-labelledby="titulo-lugar">
+      <article class="place-card">
         <div>
-          <span>logo</span>
-          <h1>Nombre del Lugar</h1>
+          <span class="place-label">Ficha de lugar</span>
+          <h2 id="titulo-lugar">Nombre del Lugar</h2>
         </div>
 
-        <media>
-          <img src="everest.jpg" alt="No supe poner la foto">
-        </media>
+        <figure class="place-photo">
+          <img src="../everest.jpg" alt="Paisaje montañoso del Everest">
+        </figure>
       </article>
 
-      <article>
+      <article class="place-card">
         <h3>Horarios de atención</h3>
         <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
       </article>
     </section>
 
-    <aside>
-      <div>
+    <aside class="place-sidebar" aria-label="Información del lugar">
+      <div class="place-card">
         <h3>Información</h3>
         <p>Es un lugar famoso por todo el mundo</p>
       </div>
 
-      <div>
+      <div class="place-card">
         <h3>Clima</h3>
         <p>Soleado, -12°C</p>
       </div>
 
-      <div>
+      <div class="place-card">
         <h3>Cosas que no hacer</h3>
         <p>No tirar basura.</p>
         <p>No hacer fogatas.</p>
         <p>No alimentar a animales (si es que hay)</p>
       </div>
 
-      <div>
+      <div class="place-card">
         <h3>Cosas que puedes hacer</h3>
         <p>Disfrutar de los paisajes y conocer la cultura local.</p>
         <p>Escalar el monte y acampar con responsabilidad.</p>
       </div>
     </aside>
   </main>
+<footer class="site-footer">
+  <p>© 2026 EcoRuta. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
-<footer>
-  <p>© 2026 EcoRuta. Todos los derechos reservados.</p>
