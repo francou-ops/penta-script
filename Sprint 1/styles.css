@@ -1,0 +1,440 @@
+:root {
+  --verde-oscuro: #153c29;
+  --verde-medio: #315c43;
+  --verde-claro: #4f6c45;
+  --crema: #f3eddf;
+  --blanco: #fffdf8;
+  --naranjo: #c7461c;
+  --azul: #357c9e;
+  --texto: #26251f;
+  --borde: #d8cbb0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--verde-oscuro);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+/* Enlace accesible para usuarios de teclado */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: black;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Base mobile-first: una columna y navegación que se ajusta. */
+/* Encabezado y navegación */
+.site-header {
+  background-color: var(--verde-oscuro);
+  border-bottom: 4px solid var(--naranjo);
+  color: white;
+}
+
+.site-nav {
+  width: min(1120px, 92%);
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.brand {
+  margin-right: auto;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand::before {
+  content: "◆";
+  margin-right: 0.2rem;
+  color: var(--naranjo);
+  font-size: 0.8rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  order: 3;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #eee9df;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.emergency-link {
+  padding: 0.65rem 1.1rem;
+  border-radius: 4px;
+  background-color: var(--naranjo);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.emergency-link:hover {
+  background-color: #a93613;
+}
+
+/* Presentación principal */
+.hero {
+  padding: 3rem max(4%, calc((100% - 1120px) / 2));
+  background:
+    linear-gradient(rgba(21, 60, 41, 0.88), rgba(21, 60, 41, 0.94)),
+    url("../Archivo/paisaje-ecoruta.jpg") center/cover;
+  color: white;
+}
+
+.hero > p {
+  margin: 0 0 0.5rem;
+  color: #d8ddd7;
+}
+
+.hero h1 {
+  max-width: 650px;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.route-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.route-filters button {
+  min-height: 44px;
+  font: inherit;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid #b7c2ba;
+  border-radius: 999px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.route-filters button:first-child,
+.route-filters button:hover {
+  background-color: white;
+  color: var(--verde-oscuro);
+}
+
+/* Ruta destacada */
+.route-layout {
+  width: min(1120px, 92%);
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.route-layout > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: -1rem;
+}
+
+.route-card {
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: 5px;
+  background-color: var(--blanco);
+}
+
+.route-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.route-card > p,
+.route-card > h3,
+.route-card > dl {
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.route-card > p:first-of-type {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--verde-claro);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.route-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.8rem;
+}
+
+.route-facts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--borde);
+}
+
+.route-layout dt {
+  color: #655e52;
+  font-size: 0.8rem;
+}
+
+.route-layout dd {
+  margin: 0.2rem 0 0;
+}
+
+.route-sidebar {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.route-sidebar section {
+  padding: 1.4rem;
+  border-radius: 5px;
+}
+
+.weather-card {
+  background-color: var(--azul);
+  color: white;
+}
+
+.weather-card h2 {
+  color: white;
+}
+
+.weather-card strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.8rem;
+}
+
+.emergency-card {
+  border: 2px solid var(--naranjo);
+  background-color: #fff2ec;
+}
+
+.emergency-card a {
+  display: block;
+  padding: 0.75rem;
+  border-radius: 3px;
+  background-color: var(--naranjo);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.emergency-card a:hover {
+  background-color: #a93613;
+}
+
+/* Emprendimientos */
+.business-grid {
+  width: min(1120px, 92%);
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.business-grid > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.business-card {
+  min-height: 180px;
+  padding: 6.5rem 1rem 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 5px;
+  background:
+    linear-gradient(to bottom, #d8c485 0 52%, var(--blanco) 52%);
+}
+
+.business-card:nth-of-type(2) {
+  background:
+    linear-gradient(to bottom, #8db7c6 0 52%, var(--blanco) 52%);
+}
+
+.business-card:nth-of-type(3) {
+  background:
+    linear-gradient(to bottom, #a6bd91 0 52%, var(--blanco) 52%);
+}
+
+.business-card p {
+  margin-bottom: 0.35rem;
+  color: var(--verde-claro);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.business-card h3 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+/* Opiniones */
+.reviews {
+  width: min(1120px, 92%);
+  margin: 2.5rem auto 4rem;
+}
+
+.review-card {
+  margin-top: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--verde-claro);
+  border-radius: 4px;
+  background-color: var(--blanco);
+}
+
+.review-card h3 {
+  margin-bottom: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+}
+
+.review-card p {
+  margin: 0;
+}
+
+/* Pie de página */
+.site-footer {
+  padding: 1.5rem;
+  background-color: var(--verde-oscuro);
+  color: #d8ddd7;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Segunda vista: ficha de lugar existente del equipo. */
+.place-header {
+  padding: 1.5rem 4%;
+  background: var(--verde-oscuro);
+  border-bottom: 4px solid var(--naranjo);
+}
+.place-header h1 { width: min(1120px, 100%); margin: auto; color: white; }
+.place-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: min(1120px, 92%);
+  margin: 1rem auto;
+}
+.place-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.place-nav [aria-current="page"] { font-weight: bold; }
+.place-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+  width: min(1120px, 92%);
+  margin: 1.5rem auto 3rem;
+  align-items: start;
+}
+.place-content, .place-sidebar { display: grid; gap: 1.5rem; }
+.place-card {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--borde);
+  border-radius: 5px;
+  background: var(--blanco);
+}
+.place-card p:last-child { margin-bottom: 0; }
+.place-label { display: block; margin-bottom: 0.5rem; color: var(--verde-medio); }
+.place-photo { margin: 0; }
+.place-photo img { display: block; width: 100%; height: auto; border-radius: 4px; }
+
+/* Tablet: ampliar las tarjetas y los datos de la ruta. */
+@media (min-width: 640px) {
+  .route-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .business-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero { padding-top: 4rem; padding-bottom: 4rem; }
+  .place-sidebar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Escritorio: navegación en una fila y panel lateral. */
+@media (min-width: 1100px) {
+  .place-layout { grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); }
+  .place-sidebar { grid-template-columns: minmax(0, 1fr); }
+  .site-nav { flex-wrap: nowrap; gap: 2rem; padding: 0; }
+  .nav-links { width: auto; order: 0; gap: 1.5rem; }
+  .hero { padding-top: 7rem; padding-bottom: 7rem; }
+  .route-layout { grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); }
+  .business-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  a, button { transition: none; }
+}
