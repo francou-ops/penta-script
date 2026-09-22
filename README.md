@@ -41,3 +41,15 @@ Enlace al tablero: https://trello.com/invite/b/6a7dd52a07f114b0a6bcf699/ATTI93ae
 ## Enlace de despliegue
 
 (agregar enlace una vez desplegado)
+
+
+## Estructura actual del repositorio
+penta-script/
+├── Sprint 1/
+│ ├── index.html # Vista principal
+│ ├── styles.css # Hoja de estilos propia del equipo
+│ ├── everest.jpg
+│ └── Archivo/ # Material de partida (esqueleto HTML, starter.css, taller_1.html)
+├── Archivo/ # Entregables del Sprint 0
+├── .gitignore
+└── README.md
