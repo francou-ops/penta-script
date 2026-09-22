@@ -1,28 +1,11 @@
-:root {
-  --verde-oscuro: #153c29;
-  --verde-medio: #315c43;
-  --verde-claro: #4f6c45;
-  --crema: #f3eddf;
-  --blanco: #fffdf8;
-  --naranjo: #c7461c;
-  --azul: #357c9e;
-  --texto: #26251f;
-  --borde: #d8cbb0;
-}
-
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 1rem;
-}
-
 body {
   margin: 0;
-  background-color: var(--crema);
-  color: var(--texto);
+  background-color: #f3eddf;
+  color: #26251f;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   overflow-wrap: anywhere;
@@ -33,16 +16,11 @@ h2,
 h3 {
   margin-top: 0;
   font-family: Georgia, "Times New Roman", serif;
-  color: var(--verde-oscuro);
+  color: #153c29;
 }
 
 a {
   color: inherit;
-}
-
-button,
-a {
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 a:focus-visible,
@@ -51,68 +29,59 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-/* Enlace accesible para usuarios de teclado */
-.skip-link {
+.saltar-contenido {
   position: absolute;
-  left: 1rem;
-  top: -4rem;
+  left: 16px;
+  top: -64px;
   z-index: 10;
-  padding: 0.75rem 1rem;
+  padding: 12px 16px;
   background-color: white;
   color: black;
 }
 
-.skip-link:focus {
-  top: 1rem;
+.saltar-contenido:focus {
+  top: 16px;
 }
 
-/* Base mobile-first: una columna y navegación que se ajusta. */
-/* Encabezado y navegación */
-.site-header {
-  background-color: var(--verde-oscuro);
-  border-bottom: 4px solid var(--naranjo);
+.cabecera {
+  background-color: #153c29;
+  border-bottom: 4px solid #c7461c;
   color: white;
 }
 
-.site-nav {
-  width: min(1120px, 92%);
+.menu {
+  width: 92%;
+  max-width: 1120px;
   min-height: 76px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
   flex-wrap: wrap;
-  padding: 1rem 0;
+  padding: 16px 0;
 }
 
-.brand {
+.logo {
   margin-right: auto;
   color: white;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: bold;
   text-decoration: none;
 }
 
-.brand::before {
-  content: "◆";
-  margin-right: 0.2rem;
-  color: var(--naranjo);
-  font-size: 0.8rem;
-}
-
-.nav-links {
+.enlaces {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   order: 3;
-  gap: 0.25rem 1rem;
+  gap: 4px 16px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.nav-links a {
+.enlaces a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -120,56 +89,53 @@ button:focus-visible {
   text-decoration: none;
 }
 
-.nav-links a:hover {
+.enlaces a:hover {
   color: white;
   text-decoration: underline;
 }
 
-.emergency-link {
-  padding: 0.65rem 1.1rem;
+.boton-emergencia {
+  padding: 10px 18px;
   border-radius: 4px;
-  background-color: var(--naranjo);
+  background-color: #c7461c;
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
-.emergency-link:hover {
+.boton-emergencia:hover {
   background-color: #a93613;
 }
 
-/* Presentación principal */
-.hero {
-  padding: 3rem max(4%, calc((100% - 1120px) / 2));
-  background:
-    linear-gradient(rgba(21, 60, 41, 0.88), rgba(21, 60, 41, 0.94)),
-    url("../Archivo/paisaje-ecoruta.jpg") center/cover;
+.presentacion {
+  padding: 48px 4%;
+  background-color: #153c29;
   color: white;
 }
 
-.hero > p {
-  margin: 0 0 0.5rem;
+.presentacion > p {
+  margin: 0 0 8px;
   color: #d8ddd7;
 }
 
-.hero h1 {
+.presentacion h1 {
   max-width: 650px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   color: white;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: 32px;
   line-height: 1.05;
 }
 
-.route-filters {
+.filtros {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
-.route-filters button {
+.filtros button {
   min-height: 44px;
   font: inherit;
-  padding: 0.55rem 1.1rem;
+  padding: 9px 18px;
   border: 1px solid #b7c2ba;
   border-radius: 999px;
   background-color: transparent;
@@ -177,264 +143,338 @@ button:focus-visible {
   cursor: pointer;
 }
 
-.route-filters button:first-child,
-.route-filters button:hover {
+.filtros button:first-child,
+.filtros button:hover {
   background-color: white;
-  color: var(--verde-oscuro);
+  color: #153c29;
 }
 
-/* Ruta destacada */
-.route-layout {
-  width: min(1120px, 92%);
-  margin: 2.5rem auto;
+.seccion-rutas {
+  width: 92%;
+  max-width: 1120px;
+  margin: 40px auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 32px;
   align-items: start;
 }
 
-.route-layout > h2 {
+.seccion-rutas > h2 {
   grid-column: 1 / -1;
-  margin-bottom: -1rem;
+  margin-bottom: -16px;
 }
 
-.route-card {
+.tarjeta-ruta {
   overflow: hidden;
-  border: 1px solid var(--borde);
+  border: 1px solid #d8cbb0;
   border-radius: 5px;
-  background-color: var(--blanco);
+  background-color: #fffdf8;
 }
 
-.route-card img {
+.tarjeta-ruta img {
   width: 100%;
   display: block;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
 }
 
-.route-card > p,
-.route-card > h3,
-.route-card > dl {
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
+.tarjeta-ruta > p,
+.tarjeta-ruta > h3,
+.tarjeta-ruta > dl {
+  margin-right: 24px;
+  margin-left: 24px;
 }
 
-.route-card > p:first-of-type {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--verde-claro);
-  font-size: 0.85rem;
+.tarjeta-ruta > p:first-of-type {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #4f6c45;
+  font-size: 14px;
   font-weight: bold;
 }
 
-.route-card h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.8rem;
+.tarjeta-ruta h3 {
+  margin-bottom: 12px;
+  font-size: 29px;
 }
 
-.route-facts {
+.datos-ruta {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--borde);
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #d8cbb0;
 }
 
-.route-layout dt {
+.seccion-rutas dt {
   color: #655e52;
-  font-size: 0.8rem;
+  font-size: 13px;
 }
 
-.route-layout dd {
-  margin: 0.2rem 0 0;
+.seccion-rutas dd {
+  margin: 3px 0 0;
 }
 
-.route-sidebar {
+.informacion-ruta {
   display: grid;
-  gap: 1.25rem;
+  gap: 20px;
 }
 
-.route-sidebar section {
-  padding: 1.4rem;
+.informacion-ruta section {
+  padding: 22px;
   border-radius: 5px;
 }
 
-.weather-card {
-  background-color: var(--azul);
+.tarjeta-clima {
+  background-color: #357c9e;
   color: white;
 }
 
-.weather-card h2 {
+.tarjeta-clima h2 {
   color: white;
 }
 
-.weather-card strong {
+.tarjeta-clima strong {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 2.8rem;
+  font-size: 45px;
 }
 
-.emergency-card {
-  border: 2px solid var(--naranjo);
+.tarjeta-emergencia {
+  border: 2px solid #c7461c;
   background-color: #fff2ec;
 }
 
-.emergency-card a {
+.tarjeta-emergencia a {
   display: block;
-  padding: 0.75rem;
+  padding: 12px;
   border-radius: 3px;
-  background-color: var(--naranjo);
+  background-color: #c7461c;
   color: white;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
 }
 
-.emergency-card a:hover {
+.tarjeta-emergencia a:hover {
   background-color: #a93613;
 }
 
-/* Emprendimientos */
-.business-grid {
-  width: min(1120px, 92%);
-  margin: 2rem auto;
+.negocios {
+  width: 92%;
+  max-width: 1120px;
+  margin: 32px auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
-.business-grid > h2 {
+.negocios > h2 {
   grid-column: 1 / -1;
   margin-bottom: 0;
 }
 
-.business-card {
+.tarjeta-negocio {
   min-height: 180px;
-  padding: 6.5rem 1rem 1rem;
-  border: 1px solid var(--borde);
+  padding: 20px;
+  border: 1px solid #d8cbb0;
   border-radius: 5px;
-  background:
-    linear-gradient(to bottom, #d8c485 0 52%, var(--blanco) 52%);
+  background-color: #fffdf8;
+  border-top: 48px solid #d8c485;
 }
 
-.business-card:nth-of-type(2) {
-  background:
-    linear-gradient(to bottom, #8db7c6 0 52%, var(--blanco) 52%);
+.tarjeta-negocio:nth-of-type(2) {
+  border-top-color: #8db7c6;
 }
 
-.business-card:nth-of-type(3) {
-  background:
-    linear-gradient(to bottom, #a6bd91 0 52%, var(--blanco) 52%);
+.tarjeta-negocio:nth-of-type(3) {
+  border-top-color: #a6bd91;
 }
 
-.business-card p {
-  margin-bottom: 0.35rem;
-  color: var(--verde-claro);
-  font-size: 0.8rem;
+.tarjeta-negocio p {
+  margin-bottom: 6px;
+  color: #4f6c45;
+  font-size: 13px;
   font-weight: bold;
 }
 
-.business-card h3 {
+.tarjeta-negocio h3 {
   margin-bottom: 0;
-  font-size: 1.2rem;
+  font-size: 19px;
 }
 
-/* Opiniones */
-.reviews {
-  width: min(1120px, 92%);
-  margin: 2.5rem auto 4rem;
+.opiniones {
+  width: 92%;
+  max-width: 1120px;
+  margin: 40px auto 64px;
 }
 
-.review-card {
-  margin-top: 0.75rem;
-  padding: 1rem 1.25rem;
-  border: 1px solid var(--borde);
-  border-left: 4px solid var(--verde-claro);
+.opinion {
+  margin-top: 12px;
+  padding: 16px 20px;
+  border: 1px solid #d8cbb0;
+  border-left: 4px solid #4f6c45;
   border-radius: 4px;
-  background-color: var(--blanco);
+  background-color: #fffdf8;
 }
 
-.review-card h3 {
-  margin-bottom: 0.2rem;
+.opinion h3 {
+  margin-bottom: 3px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
+  font-size: 15px;
 }
 
-.review-card p {
+.opinion p {
   margin: 0;
 }
 
-/* Pie de página */
-.site-footer {
-  padding: 1.5rem;
-  background-color: var(--verde-oscuro);
+.pie {
+  padding: 24px;
+  background-color: #153c29;
   color: #d8ddd7;
   text-align: center;
 }
 
-.site-footer p {
+.pie p {
   margin: 0;
 }
 
-/* Segunda vista: ficha de lugar existente del equipo. */
-.place-header {
-  padding: 1.5rem 4%;
-  background: var(--verde-oscuro);
-  border-bottom: 4px solid var(--naranjo);
+.cabecera-lugar {
+  padding: 24px 4%;
+  background: #153c29;
+  border-bottom: 4px solid #c7461c;
 }
-.place-header h1 { width: min(1120px, 100%); margin: auto; color: white; }
-.place-nav {
+
+.cabecera-lugar h1 {
+  width: 100%;
+  max-width: 1120px;
+  margin: auto;
+  color: white;
+}
+
+.menu-lugar {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  width: min(1120px, 92%);
-  margin: 1rem auto;
+  gap: 24px;
+  width: 92%;
+  max-width: 1120px;
+  margin: 16px auto;
 }
-.place-nav a { display: inline-flex; align-items: center; min-height: 44px; }
-.place-nav [aria-current="page"] { font-weight: bold; }
-.place-layout {
+
+.menu-lugar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.menu-lugar [aria-current="page"] {
+  font-weight: bold;
+}
+
+.detalle-lugar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 1.5rem;
-  width: min(1120px, 92%);
-  margin: 1.5rem auto 3rem;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 92%;
+  max-width: 1120px;
+  margin: 24px auto 48px;
   align-items: start;
 }
-.place-content, .place-sidebar { display: grid; gap: 1.5rem; }
-.place-card {
+
+.contenido-lugar, .informacion-lugar {
+  display: grid;
+  gap: 24px;
+}
+
+.tarjeta-lugar {
   min-width: 0;
-  padding: 1.25rem;
-  border: 1px solid var(--borde);
+  padding: 20px;
+  border: 1px solid #d8cbb0;
   border-radius: 5px;
-  background: var(--blanco);
+  background: #fffdf8;
 }
-.place-card p:last-child { margin-bottom: 0; }
-.place-label { display: block; margin-bottom: 0.5rem; color: var(--verde-medio); }
-.place-photo { margin: 0; }
-.place-photo img { display: block; width: 100%; height: auto; border-radius: 4px; }
 
-/* Tablet: ampliar las tarjetas y los datos de la ruta. */
+.tarjeta-lugar p:last-child {
+  margin-bottom: 0;
+}
+
+.etiqueta-lugar {
+  display: block;
+  margin-bottom: 8px;
+  color: #315c43;
+}
+
+.foto-lugar {
+  margin: 0;
+}
+
+.foto-lugar img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 @media (min-width: 640px) {
-  .route-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .business-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hero { padding-top: 4rem; padding-bottom: 4rem; }
-  .place-sidebar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .datos-ruta {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .negocios {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .presentacion {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .presentacion h1 {
+    font-size: 48px;
+  }
+
+  .informacion-lugar {
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
 
-/* Escritorio: navegación en una fila y panel lateral. */
 @media (min-width: 1100px) {
-  .place-layout { grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); }
-  .place-sidebar { grid-template-columns: minmax(0, 1fr); }
-  .site-nav { flex-wrap: nowrap; gap: 2rem; padding: 0; }
-  .nav-links { width: auto; order: 0; gap: 1.5rem; }
-  .hero { padding-top: 7rem; padding-bottom: 7rem; }
-  .route-layout { grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); }
-  .business-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
+  .detalle-lugar {
+    grid-template-columns: 2fr 1fr;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  a, button { transition: none; }
+  .informacion-lugar {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    flex-wrap: nowrap;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .enlaces {
+    width: auto;
+    order: 0;
+    gap: 24px;
+  }
+
+  .presentacion {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .presentacion h1 {
+    font-size: 56px;
+  }
+
+  .seccion-rutas {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .negocios {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
 }
