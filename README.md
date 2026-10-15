@@ -54,9 +54,16 @@ penta-script/
 │   └── paisaje-ecoruta.jpg
 ├── js/                 # Scripts (se agregan en el Sprint 2)
 ├── pages/
-│   └── vista_2.html    # Vista de detalle de ruta
+│   ├── vista_2.html    # Ruta moderada
+│   ├── vista_1.html # Ruta fácil de ejemplo
+│   └── vista_3.html # Ruta difícil de ejemplo
 ├── .gitignore
 └── README.md
 ```
 
 Convención de nombres: minúsculas, guiones, sin tildes ni espacios.
+## Navegación del prototipo
+
+Las dificultades se enlazan con HTML (`<a href="...">`), sin JavaScript.
+La portada muestra las tres rutas y cada ficha permite cambiar de dificultad o volver al inicio.
+Las rutas fácil y difícil son ejemplos ficticios para la maqueta académica. El clima es ilustrativo, sin actualización en tiempo real.

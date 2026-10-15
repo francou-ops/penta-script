@@ -23,7 +23,6 @@
       <ul class="enlaces">
         <li><a href="#" aria-current="page">Inicio</a></li>
         <li><a href="#rutas">Rutas</a></li>
-        <li><a href="Archivo/taller_1.html">Lugares</a></li>
         <li><a href="#emprendimientos">Emprendimientos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
@@ -39,50 +38,79 @@
         Descubre la Araucanía sustentable
       </h1>
 
-      <div class="filtros" aria-label="Filtrar rutas por dificultad">
-        <button type="button">Todas</button>
-        <button type="button">Fácil</button>
-        <button type="button">Moderada</button>
-        <button type="button">Difícil</button>
-      </div>
+      <nav class="filtros" aria-label="Rutas por dificultad">
+        <a href="index.html#rutas" aria-current="page">Todas</a>
+        <a href="pages/vista_1.html">Fácil</a>
+        <a href="pages/vista_2.html">Moderada</a>
+        <a href="pages/vista_3.html">Difícil</a>
+      </nav>
     </section>
 
     <section class="seccion-rutas" id="rutas" aria-labelledby="titulo-rutas">
-      <h2 id="titulo-rutas">Ruta destacada</h2>
+      <h2 id="titulo-rutas">Todas las rutas</h2>
 
-      <article class="tarjeta-ruta">
-        <img
-          src="img/paisaje-ecoruta.jpg"
-          alt="Paisaje natural de una ruta en La Araucanía"
-        >
+      <div class="listado-rutas">
 
-        <p>Ficha de sendero</p>
-        <h3>Sendero Volcán Villarrica</h3>
-        <p><strong>Dificultad:</strong> Moderada</p>
+        <article class="tarjeta-ruta">
+          <img
+            src="img/paisaje-ecoruta.jpg"
+            alt="Paisaje natural de una ruta en La Araucanía"
+          >
 
-        <dl class="datos-ruta">
-          <div>
-            <dt>Distancia</dt>
-            <dd>12 km</dd>
-          </div>
+          <p>Ficha de sendero</p>
+          <h3>Sendero Volcán Villarrica</h3>
+          <p><strong>Dificultad:</strong> Moderada</p>
 
-          <div>
-            <dt>Tiempo estimado</dt>
-            <dd>4 horas</dd>
-          </div>
+          <dl class="datos-ruta">
+            <div>
+              <dt>Distancia</dt>
+              <dd>12 km</dd>
+            </div>
 
-          <div>
-            <dt>Punto de partida</dt>
-            <dd>Sector Los Nevados</dd>
-          </div>
-        </dl>
-      </article>
+            <div>
+              <dt>Tiempo estimado</dt>
+              <dd>4 horas</dd>
+            </div>
+
+            <div>
+              <dt>Punto de partida</dt>
+              <dd>Sector Los Nevados</dd>
+            </div>
+          </dl>
+          <p><a href="pages/vista_2.html">Ver ruta moderada</a></p>
+        </article>
+
+        <article class="tarjeta-ruta">
+          <p>Ficha de sendero · Ruta de ejemplo</p>
+          <h3>Sendero del Bosque</h3>
+          <p><strong>Dificultad:</strong> Fácil</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>3 km</dd></div>
+            <div><dt>Tiempo estimado</dt><dd>1 hora</dd></div>
+            <div><dt>Punto de partida</dt><dd>Entrada del bosque</dd></div>
+          </dl>
+          <p><a href="pages/vista_1.html">Ver ruta fácil</a></p>
+        </article>
+
+        <article class="tarjeta-ruta">
+          <p>Ficha de sendero · Ruta de ejemplo</p>
+          <h3>Travesía de las Cumbres</h3>
+          <p><strong>Dificultad:</strong> Difícil</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>18 km</dd></div>
+            <div><dt>Tiempo estimado</dt><dd>8 horas</dd></div>
+            <div><dt>Punto de partida</dt><dd>Base de la montaña</dd></div>
+          </dl>
+          <p><a href="pages/vista_3.html">Ver ruta difícil</a></p>
+        </article>
+      </div>
 
       <aside class="informacion-ruta" aria-label="Información para realizar la ruta">
         <section class="tarjeta-clima" aria-labelledby="titulo-clima">
           <h2 id="titulo-clima">Clima</h2>
           <p><strong>22 °C</strong></p>
           <p>Soleado, Pucón</p>
+          <p>Clima de ejemplo, sin actualización en tiempo real.</p>
         </section>
 
         <section class="tarjeta-emergencia" id="emergencia" aria-labelledby="titulo-emergencia">
