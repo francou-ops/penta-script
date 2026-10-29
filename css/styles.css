@@ -56,13 +56,14 @@ button:focus-visible {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
   flex-wrap: wrap;
-  padding: 16px 0;
+  padding: 20px 0;
+  justify-content: center;
 }
 
 .logo {
-  margin-right: auto;
+  margin-right: 0;
   color: white;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 24px;
@@ -87,11 +88,13 @@ button:focus-visible {
   min-height: 44px;
   color: #eee9df;
   text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .enlaces a:hover {
   color: white;
   text-decoration: underline;
+  transform: translateY(-2px);
 }
 
 .boton-emergencia {
@@ -101,16 +104,19 @@ button:focus-visible {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
 }
 
 .boton-emergencia:hover {
   background-color: #a93613;
+  transform: translateY(-2px);
 }
 
 .presentacion {
   padding: 48px 4%;
   background-color: #153c29;
   color: white;
+  text-align: left;
 }
 
 .presentacion > p {
@@ -130,6 +136,7 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  justify-content: flex-start;
 }
 
 .filtros a {
@@ -150,6 +157,7 @@ button:focus-visible {
 .filtros a:hover {
   background-color: white;
   color: #153c29;
+  transform: translateY(-2px);
 }
 
 .seccion-rutas {
@@ -173,11 +181,27 @@ button:focus-visible {
   min-width: 0;
 }
 
+.rutas-categoria {
+  width: 92%;
+  max-width: 1120px;
+  margin: 40px auto 0;
+}
+
+.rutas-categoria h2 {
+  margin-bottom: 20px;
+}
+
 .tarjeta-ruta {
   overflow: hidden;
   border: 1px solid #d8cbb0;
   border-radius: 5px;
   background-color: #fffdf8;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tarjeta-ruta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(21, 60, 41, 0.14);
 }
 
 .tarjeta-ruta img {
@@ -246,7 +270,52 @@ button:focus-visible {
 
 .tarjeta-clima strong {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 45px;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.tarjeta-clima #cielo {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.ruta-destacada {
+  grid-column: 1 / -1;
+}
+
+.ruta-destacada .tarjeta-ruta {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+  align-items: center;
+}
+
+.ruta-destacada .tarjeta-ruta img {
+  grid-row: span 4;
+  height: 100%;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.rutas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.rutas-grid .tarjeta-ruta {
+  height: 100%;
+}
+
+.rutas-grid .tarjeta-ruta img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.enlace-ruta {
+  display: inline-block;
+  margin: 0 24px 24px;
+  font-weight: bold;
+  color: #315c43;
 }
 
 .tarjeta-emergencia {
@@ -290,6 +359,12 @@ button:focus-visible {
   border-radius: 5px;
   background-color: #fffdf8;
   border-top: 48px solid #d8c485;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.tarjeta-negocio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(21, 60, 41, 0.12);
 }
 
 .tarjeta-negocio:nth-of-type(2) {
@@ -362,6 +437,10 @@ button:focus-visible {
     padding-bottom: 64px;
   }
 
+  .ruta-destacada .tarjeta-ruta img {
+    max-height: 300px;
+  }
+
   .presentacion h1 {
     font-size: 48px;
   }
@@ -381,7 +460,7 @@ button:focus-visible {
   .enlaces {
     width: auto;
     order: 0;
-    gap: 24px;
+    gap: 28px;
   }
 
   .presentacion {
@@ -393,12 +472,38 @@ button:focus-visible {
     font-size: 56px;
   }
 
+  .rutas-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .seccion-rutas {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(0, 3fr) minmax(270px, 1fr);
   }
 
   .negocios {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .ruta-destacada .tarjeta-ruta {
+    display: block;
+  }
+
+  .ruta-destacada .tarjeta-ruta img {
+    height: auto;
+  }
+
+  .rutas-grid {
+    grid-template-columns: 1fr;
+  }
 }
