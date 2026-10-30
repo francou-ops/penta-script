@@ -47,70 +47,151 @@
     </section>
 
     <section class="seccion-rutas" id="rutas" aria-labelledby="titulo-rutas">
-      <h2 id="titulo-rutas">Todas las rutas</h2>
+      <h2 id="titulo-rutas">Rutas para descubrir</h2>
 
       <div class="listado-rutas">
-
-        <article class="tarjeta-ruta">
-          <img
-            src="img/paisaje-ecoruta.jpg"
-            alt="Paisaje natural de una ruta en La Araucanía"
+        <div class="ruta-destacada">
+          <p class="etiqueta-ruta">Ruta destacada</p>
+          <article
+            class="tarjeta-ruta"
+            data-ruta="Sendero Volcán Villarrica"
+            data-lat="-39.42"
+            data-lon="-71.93"
           >
+          <img
+            src="img/volcan-villarrica.jpg"
+            alt="Paisaje natural de la ruta del volcán Villarrica"
+          >
+            <h3>Sendero Volcán Villarrica</h3>
+            <p><strong>Dificultad:</strong> Moderada</p>
+            <dl class="datos-ruta">
+              <div><dt>Distancia</dt><dd>12 km</dd></div>
+              <div><dt>Tiempo estimado</dt><dd>4 horas</dd></div>
+              <div><dt>Punto de partida</dt><dd>Sector Los Nevados</dd></div>
+            </dl>
+            <section class="clima-ruta" aria-label="Clima del Sendero Volcán Villarrica">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <a class="enlace-ruta" href="pages/vista_2.html">Ver ruta</a>
+          </article>
+        </div>
 
-          <p>Ficha de sendero</p>
-          <h3>Sendero Volcán Villarrica</h3>
-          <p><strong>Dificultad:</strong> Moderada</p>
-
-          <dl class="datos-ruta">
-            <div>
-              <dt>Distancia</dt>
-              <dd>12 km</dd>
-            </div>
-
-            <div>
-              <dt>Tiempo estimado</dt>
-              <dd>4 horas</dd>
-            </div>
-
-            <div>
-              <dt>Punto de partida</dt>
-              <dd>Sector Los Nevados</dd>
-            </div>
-          </dl>
-          <p><a href="pages/vista_2.html">Ver ruta moderada</a></p>
-        </article>
-
-        <article class="tarjeta-ruta">
-          <p>Ficha de sendero · Ruta de ejemplo</p>
-          <h3>Sendero del Bosque</h3>
-          <p><strong>Dificultad:</strong> Fácil</p>
-          <dl class="datos-ruta">
-            <div><dt>Distancia</dt><dd>3 km</dd></div>
-            <div><dt>Tiempo estimado</dt><dd>1 hora</dd></div>
-            <div><dt>Punto de partida</dt><dd>Entrada del bosque</dd></div>
-          </dl>
-          <p><a href="pages/vista_1.html">Ver ruta fácil</a></p>
-        </article>
-
-        <article class="tarjeta-ruta">
-          <p>Ficha de sendero · Ruta de ejemplo</p>
-          <h3>Travesía de las Cumbres</h3>
-          <p><strong>Dificultad:</strong> Difícil</p>
-          <dl class="datos-ruta">
-            <div><dt>Distancia</dt><dd>18 km</dd></div>
-            <div><dt>Tiempo estimado</dt><dd>8 horas</dd></div>
-            <div><dt>Punto de partida</dt><dd>Base de la montaña</dd></div>
-          </dl>
-          <p><a href="pages/vista_3.html">Ver ruta difícil</a></p>
-        </article>
+        <div class="rutas-grid">
+          <article class="tarjeta-ruta" data-ruta="Sendero Los Lagos" data-lat="-39.13" data-lon="-71.70">
+            <img src="img/sendero-los-lagos.jpg" alt="Bosque nativo en Huerquehue">
+            <p>Parque Nacional Huerquehue</p><h3>Sendero Los Lagos</h3>
+            <p><strong>Dificultad:</strong> Moderada</p>
+            <section class="clima-ruta" aria-label="Clima del Sendero Los Lagos">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_2.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Mirador El Cañi" data-lat="-39.27" data-lon="-71.76">
+            <img src="img/reserva-el-cani.jpg" alt="Bosque nativo de El Cañi">
+            <p>Reserva El Cañi</p><h3>Mirador El Cañi</h3>
+            <p><strong>Dificultad:</strong> Difícil</p>
+            <section class="clima-ruta" aria-label="Clima del Mirador El Cañi">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_3.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Sierra Nevada" data-lat="-38.65" data-lon="-71.64">
+            <img src="img/sierra-nevada.jpg" alt="Paisaje del Parque Nacional Conguillío">
+            <p>Parque Nacional Conguillío</p><h3>Sierra Nevada</h3>
+            <p><strong>Dificultad:</strong> Difícil</p>
+            <section class="clima-ruta" aria-label="Clima de Sierra Nevada">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_3.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Sendero Las Araucarias" data-lat="-39.41" data-lon="-71.95">
+            <img src="img/sendero-las-araucarias.jpg" alt="Sendero entre araucarias">
+            <p>Parque Nacional Villarrica</p><h3>Sendero Las Araucarias</h3>
+            <p><strong>Dificultad:</strong> Fácil</p>
+            <section class="clima-ruta" aria-label="Clima del Sendero Las Araucarias">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_1.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Sendero Laguna Blanca" data-lat="-38.47" data-lon="-71.58">
+            <img src="img/sendero-laguna-blanca.jpg" alt="Sendero de montaña en Malalcahuello">
+            <p>Reserva Nacional Malalcahuello</p><h3>Sendero Laguna Blanca</h3>
+            <p><strong>Dificultad:</strong> Moderada</p>
+            <section class="clima-ruta" aria-label="Clima del Sendero Laguna Blanca">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_2.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Sendero del Bosque" data-lat="-39.13" data-lon="-71.70">
+            <img src="img/sendero-los-lagos.jpg" alt="Sendero entre bosque nativo de Huerquehue">
+            <p>Parque Nacional Huerquehue</p><h3>Sendero del Bosque</h3>
+            <p><strong>Dificultad:</strong> Fácil</p>
+            <section class="clima-ruta" aria-label="Clima del Sendero del Bosque">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_1.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Sendero Laguna Verde" data-lat="-38.47" data-lon="-71.58">
+            <img src="img/sendero-laguna-blanca.jpg" alt="Laguna rodeada de bosque en Malalcahuello">
+            <p>Reserva Nacional Malalcahuello</p><h3>Sendero Laguna Verde</h3>
+            <p><strong>Dificultad:</strong> Fácil</p>
+            <section class="clima-ruta" aria-label="Clima del Sendero Laguna Verde">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_1.html">Ver ruta</a></p>
+          </article>
+          <article class="tarjeta-ruta" data-ruta="Travesía de las Cumbres" data-lat="-39.42" data-lon="-71.93">
+            <img src="img/travesia-cumbre.jpg" alt="Travesía de las cumbres">
+            <p>Parque Nacional Villarrica</p><h3>Travesía de las Cumbres</h3>
+            <p><strong>Dificultad:</strong> Difícil</p>
+            <section class="clima-ruta" aria-label="Clima de la Travesía de las Cumbres">
+              <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+              <p>Temperatura: <strong class="temperatura">--</strong></p>
+              <p>Viento: <strong class="viento">--</strong></p>
+              <p>Cielo: <strong class="cielo">--</strong></p>
+              <p class="aviso-clima" hidden></p>
+            </section>
+            <p class="enlace-ruta"><a href="pages/vista_3.html">Ver ruta</a></p>
+          </article>
+        </div>
       </div>
 
       <aside class="informacion-ruta" aria-label="Información para realizar la ruta">
         <section class="tarjeta-clima" aria-labelledby="titulo-clima">
           <h2 id="titulo-clima">Clima</h2>
-          <p><strong>22 °C</strong></p>
-          <p>Soleado, Pucón</p>
-          <p>Clima de ejemplo, sin actualización en tiempo real.</p>
+          <p>Consulta el clima actualizado dentro de cada ficha de ruta.</p>
         </section>
 
         <section class="tarjeta-emergencia" id="emergencia" aria-labelledby="titulo-emergencia">
@@ -135,17 +216,17 @@
 
       <article class="tarjeta-negocio">
         <p>Artesanía local</p>
-        <h3>Artesanías Pucón</h3>
+        <h3><a href="pages/vista_2.html">Artesanías de Pucón</a></h3>
       </article>
 
       <article class="tarjeta-negocio">
-        <p>Arriendo de equipo</p>
-        <h3>Equipamiento Trekking</h3>
+        <p>Alojamiento cercano</p>
+        <h3><a href="pages/vista_2.html">Hospedajes de Pucón</a></h3>
       </article>
 
       <article class="tarjeta-negocio">
         <p>Guía certificado</p>
-        <h3>Guías Araucanía</h3>
+        <h3><a href="pages/vista_3.html">Guías de montaña</a></h3>
       </article>
     </section>
 
