@@ -311,6 +311,34 @@ button:focus-visible {
   object-fit: cover;
 }
 
+.clima-ruta {
+  margin: 16px 24px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  background-color: #e9f3f6;
+  color: #243b44;
+  font-size: 14px;
+}
+
+.clima-ruta p {
+  margin: 4px 0;
+}
+
+.clima-ruta .estado-clima {
+  margin-bottom: 8px;
+  color: #315c43;
+  font-weight: bold;
+}
+
+.clima-ruta strong {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: inherit;
+}
+
+.ruta-destacada .clima-ruta {
+  margin-top: 0;
+}
+
 .enlace-ruta {
   display: inline-block;
   margin: 0 24px 24px;
