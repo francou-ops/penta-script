@@ -11,25 +11,45 @@ const cielo = document.querySelector("#cielo");
 const aviso = document.querySelector("#aviso-clima");
 
 function describirCielo(codigo) {
-  if (codigo === 0) return "despejado, dia lindo";
-  if (codigo <= 3) return "parcialmente nublado";
-  if (codigo === 45 || codigo === 48) return "niebla";
-  if (codigo >= 51 && codigo <= 57) return "llovizna";
-  if (codigo >= 61 && codigo <= 67) return "lluvia";
-  if (codigo >= 71 && codigo <= 77) return "nieve";
-  if (codigo >= 80 && codigo <= 82) return "chispeando";
-  if (codigo >= 95) return "tormenta";
-  return "condiciones del clima variables";
+  if (codigo === 0) return "Despejado";
+  if (codigo === 1) return "Mayormente despejado";
+  if (codigo === 2) return "Parcialmente nublado";
+  if (codigo === 3) return "Nublado";
+  if (codigo === 45 || codigo === 48) return "Niebla";
+  if (codigo === 51 || codigo === 53 || codigo === 55) return "Llovizna";
+  if (codigo === 56 || codigo === 57) return "Llovizna helada";
+  if (codigo === 61 || codigo === 63 || codigo === 65) return "Lluvia";
+  if (codigo === 66 || codigo === 67) return "Lluvia helada";
+  if (codigo === 71 || codigo === 73 || codigo === 75 || codigo === 77) return "Nieve";
+  if (codigo === 80 || codigo === 81 || codigo === 82) return "Chubascos";
+  if (codigo === 85 || codigo === 86) return "Chubascos de nieve";
+  if (codigo === 95 || codigo === 97) return "Tormenta";
+  if (codigo === 96 || codigo === 99) return "Tormenta con granizo";
+  return "Información del cielo no disponible";
 }
 
-function mostrarAviso(clima) {
-  if (clima.temperature_2m < 8) {
-    aviso.textContent = "hace frio: lleva chaqueta";
-  } else if (clima.wind_speed_10m > 40) {
-    aviso.textContent = "viento fuerte: usa gorrito";
-  } else {
-    aviso.textContent = "buen clima para salir";
+function mostrarAviso(clima, aviso) {
+  if (!clima || !Number.isFinite(clima.temperature_2m) || !Number.isFinite(clima.wind_speed_10m)) {
+    aviso.textContent = "No hay datos suficientes para mostrar avisos.";
+    aviso.hidden = false;
+    return;
   }
+
+  let mensaje = "";
+
+  if (clima.temperature_2m < 8) {
+    mensaje = "Hace frío: lleva abrigo. ";
+  }
+
+  if (clima.wind_speed_10m > 40) {
+    mensaje += "Viento fuerte: evita sectores expuestos.";
+  }
+
+  if (mensaje === "") {
+    mensaje = "Sin avisos por temperatura o viento.";
+  }
+
+  aviso.textContent = mensaje.trim();
   aviso.hidden = false;
 }
 
@@ -44,7 +64,7 @@ async function mostrarClima() {
     temperatura.textContent = `${clima.temperature_2m} ${datos.current_units.temperature_2m}`;
     viento.textContent = `${clima.wind_speed_10m} ${datos.current_units.wind_speed_10m}`;
     cielo.textContent = describirCielo(clima.weather_code);
-    mostrarAviso(clima);
+    mostrarAviso(clima, aviso);
     estado.textContent = "clima actual";
   } catch (error) {
     console.error(error);
