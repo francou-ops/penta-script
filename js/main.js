@@ -48,7 +48,11 @@ async function mostrarClima() {
     estado.textContent = "clima actual";
   } catch (error) {
     console.error(error);
-  estado.textContent = "No se pudo cargar el clima. Revisa tu conexión e inténtalo nuevamente.";
+    temperatura.textContent = "--";
+    viento.textContent = "--";
+    cielo.textContent = "--";
+    aviso.hidden = true;
+    estado.textContent = "No se pudo cargar el clima. Revisa tu conexión e inténtalo nuevamente.";
   }
 }
 
