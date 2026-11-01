@@ -1,15 +1,3 @@
-const climaa =
-  "https://api.open-meteo.com/v1/forecast" +
-  "?latitude=-39.28&longitude=-71.98" +
-  "&current=temperature_2m,wind_speed_10m,weather_code" +
-  "&timezone=America%2FSantiago";
-
-const estado = document.querySelector("#estado");
-const temperatura = document.querySelector("#temperatura");
-const viento = document.querySelector("#viento");
-const cielo = document.querySelector("#cielo");
-const aviso = document.querySelector("#aviso-clima");
-
 function describirCielo(codigo) {
   if (codigo === 0) return "Despejado";
   if (codigo === 1) return "Mayormente despejado";
@@ -53,27 +41,83 @@ function mostrarAviso(clima, aviso) {
   aviso.hidden = false;
 }
 
-async function mostrarClima() {
-  estado.textContent = "cargando el clima";
+async function cargarClima(latitud, longitud, tarjeta) {
+  const estado = tarjeta.querySelector(".estado-clima");
+  const temperatura = tarjeta.querySelector(".temperatura");
+  const viento = tarjeta.querySelector(".viento");
+  const cielo = tarjeta.querySelector(".cielo");
+  const aviso = tarjeta.querySelector(".aviso-clima");
+
+  // Evita acceder a elementos que no existen.
+  if (!estado || !temperatura || !viento || !cielo || !aviso) {
+    return;
+  }
+
+  estado.textContent = "Cargando clima…";
+  temperatura.textContent = "--";
+  viento.textContent = "--";
+  cielo.textContent = "--";
+  aviso.textContent = "";
+  aviso.hidden = true;
+
   try {
-    const respuesta = await fetch(climaa);
-    if (!respuesta.ok) throw new Error("la api respondio con error");
+    const parametros = new URLSearchParams({
+      latitude: latitud,
+      longitude: longitud,
+      current: "temperature_2m,wind_speed_10m,weather_code",
+      temperature_unit: "celsius",
+      wind_speed_unit: "kmh",
+      timezone: "America/Santiago"
+    });
+
+    const url = `https://api.open-meteo.com/v1/forecast?${parametros}`;
+
+    const respuesta = await fetch(url);
+
+    if (!respuesta.ok) {
+      throw new Error("La API respondió con un error");
+    }
 
     const datos = await respuesta.json();
     const clima = datos.current;
-    temperatura.textContent = `${clima.temperature_2m} ${datos.current_units.temperature_2m}`;
-    viento.textContent = `${clima.wind_speed_10m} ${datos.current_units.wind_speed_10m}`;
+
+    // Comprueba que los datos necesarios sean números válidos.
+    if (
+      !clima ||
+      ![
+        clima.temperature_2m,
+        clima.wind_speed_10m,
+        clima.weather_code
+      ].every(Number.isFinite)
+    ) {
+      throw new Error("La API devolvió datos incompletos");
+    }
+
+    temperatura.textContent = `${clima.temperature_2m} °C`;
+    viento.textContent = `${clima.wind_speed_10m} km/h`;
     cielo.textContent = describirCielo(clima.weather_code);
+
     mostrarAviso(clima, aviso);
-    estado.textContent = "clima actual";
-  } catch (error) {
-    console.error(error);
+
+    estado.textContent = "Clima actualizado.";
+  } catch {
     temperatura.textContent = "--";
     viento.textContent = "--";
     cielo.textContent = "--";
+    aviso.textContent = "";
     aviso.hidden = true;
-    estado.textContent = "No se pudo cargar el clima. Revisa tu conexión e inténtalo nuevamente.";
+
+    estado.textContent =
+      "No se pudo cargar el clima. Revisa tu conexión y recarga la página.";
   }
 }
 
-mostrarClima();
+document.querySelectorAll(
+  ".tarjeta-ruta[data-lat][data-lon], .tarjeta-clima[data-lat][data-lon]"
+).forEach((tarjeta) => {
+  const latitud = tarjeta.dataset.lat;
+  const longitud = tarjeta.dataset.lon;
+
+  cargarClima(latitud, longitud, tarjeta);
+});
+
