@@ -9,6 +9,7 @@ export default function ListaRutas({ rutas }) {
       alt={ruta.alt}
       distanciaKm={ruta.distanciaKm}
       dificultad={ruta.dificultad}
+      accesible={ruta.accesible}
     />
   ));
 

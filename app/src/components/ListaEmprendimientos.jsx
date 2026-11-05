@@ -2,7 +2,7 @@ import TarjetaEmprendimiento from "./TarjetaEmprendimiento.jsx";
 
 export default function ListaEmprendimientos({ emprendimientos }) {
   return (
-    <section aria-labelledby="titulo-emprendimientos">
+    <section className="negocios" id="emprendimientos" aria-labelledby="titulo-emprendimientos">
       <h2 id="titulo-emprendimientos">Tiendas y servicios cercanos</h2>
 
       {emprendimientos.map((emprendimiento) => (

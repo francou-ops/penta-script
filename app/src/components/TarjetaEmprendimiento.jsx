@@ -4,7 +4,7 @@ export default function TarjetaEmprendimiento({
   enlace, // vista??
 }) {
   return (
-    <article className="tarjeta-emprendimiento">
+    <article className="tarjeta-negocio">
       <p>{rubro}</p>
       <h3>
         <a href={enlace}>{nombre}</a>
