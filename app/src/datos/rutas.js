@@ -14,6 +14,7 @@ export const rutas = [
     alt: "Paisaje natural de la ruta del volcán Villarrica",
     distanciaKm: 12,
     dificultad: "Moderada",
+    accesible: false,
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const rutas = [
     alt: "Bosque nativo en Huerquehue",
     distanciaKm: 12,
     dificultad: "Moderada",
+    accesible: false,
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const rutas = [
     alt: "Bosque nativo de El Cañi",
     distanciaKm: 18,
     dificultad: "Difícil",
+    accesible: false,
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ export const rutas = [
     alt: "Paisaje del Parque Nacional Conguillío",
     distanciaKm: 20,
     dificultad: "Difícil",
+    accesible: false,
   },
   {
     id: 5,
@@ -46,6 +50,7 @@ export const rutas = [
     alt: "Sendero entre araucarias",
     distanciaKm: 4,
     dificultad: "Fácil",
+    accesible: true,
   },
   {
     id: 6,
@@ -54,6 +59,7 @@ export const rutas = [
     alt: "Sendero de montaña en Malalcahuello",
     distanciaKm: 8,
     dificultad: "Moderada",
+    accesible: false,
   },
   {
     id: 7,
@@ -62,6 +68,7 @@ export const rutas = [
     alt: "Sendero entre bosque nativo de Huerquehue",
     distanciaKm: 3,
     dificultad: "Fácil",
+    accesible: true,
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const rutas = [
     alt: "Laguna rodeada de bosque en Malalcahuello",
     distanciaKm: 5,
     dificultad: "Fácil",
+    accesible: true,
   },
   {
     id: 9,
@@ -78,5 +86,6 @@ export const rutas = [
     alt: "Travesía de las cumbres",
     distanciaKm: 18,
     dificultad: "Difícil",
+    accesible: false,
   },
 ];
