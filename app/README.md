@@ -1,20 +1,16 @@
-# EcoRuta — aplicación React
+# React + Vite
 
-Aplicación del Sprint 2, construida con React y Vite. El sitio HTML original permanece en la raíz del repositorio.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Desde esta carpeta:
+Currently, two official plugins are available:
 
-```bash
-npm ci
-npm run dev
-```
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Abrir la dirección indicada por Vite. Para revisar el código y compilar:
+## React Compiler
 
-```bash
-npm run lint
-npm run build
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Los componentes están en `src/components`, los datos en `src/datos` y la integración en `src/App.jsx`.
-Los estilos base se reutilizan desde `../css/styles.css`; los ajustes de React están en `src/App.css`.
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
