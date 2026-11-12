@@ -4,6 +4,7 @@ export default function ListaRutas({ rutas }) {
   const tarjetas = rutas.map((ruta) => (
     <TarjetaRuta
       key={ruta.id}
+      id={ruta.id}
       nombre={ruta.nombre}
       imagen={ruta.imagen}
       alt={ruta.alt}
