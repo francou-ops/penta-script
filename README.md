@@ -6,10 +6,10 @@ Página web informativa sobre rutas y emprendimientos de turismo sustentable en 
 
 | Nombre             | Rol ágil      |
 |--------------------|---------------|
-| Franco Lillo       | QA            |
-| Cristóbal Dapellus | Dev           |
-| Benjamín Pedraza   | Scrum Master  |
-| José Sepúlveda     | Product Owner |
+| Franco Lillo       | Dev           |
+| Cristóbal Dapellus | Scrum Master  |
+| Benjamín Pedraza   | Product Owner |
+| José Sepúlveda     | QA            |
 
 ## Tecnologías utilizadas
 
