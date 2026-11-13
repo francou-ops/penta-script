@@ -1,6 +1,6 @@
 import TarjetaRuta from "./TarjetaRuta.jsx";
 
-export default function ListaRutas({ rutas }) {
+export default function ListaRutas({ rutas, titulo = "Rutas para descubrir" }) {
   // Encargo D: pasa la prop id={ruta.id} a cada TarjetaRuta
   const tarjetas = rutas.map((ruta) => (
     <TarjetaRuta
@@ -19,7 +19,7 @@ export default function ListaRutas({ rutas }) {
 
   return (
     <section className="seccion-rutas" id="rutas" aria-labelledby="titulo-rutas">
-      <h2 id="titulo-rutas">Rutas para descubrir</h2>
+      <h2 id="titulo-rutas">{titulo}</h2>
 
       <div className="listado-rutas">
         {destacada && (
