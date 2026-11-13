@@ -1,9 +1,11 @@
 import TarjetaRuta from "./TarjetaRuta.jsx";
 
 export default function ListaRutas({ rutas }) {
+  // Encargo D: pasa la prop id={ruta.id} a cada TarjetaRuta
   const tarjetas = rutas.map((ruta) => (
     <TarjetaRuta
       key={ruta.id}
+      id={ruta.id}
       nombre={ruta.nombre}
       imagen={ruta.imagen}
       alt={ruta.alt}
