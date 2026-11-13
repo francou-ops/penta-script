@@ -1,4 +1,8 @@
+import { Link } from 'react-router'
+
+// Encargo D: Enlace a DetalleRuta (/rutas/:id)
 export default function TarjetaRuta({
+  id,
   nombre,
   imagen,
   alt,
@@ -21,6 +25,12 @@ export default function TarjetaRuta({
         </div>
       </dl>
       {accesible && <span className="sello">Accesible</span>}
+      {/* Criterio C1 / Encargo D: Enlace con Link hacia /rutas/:id */}
+      {id !== undefined && (
+        <Link className="enlace-ruta" to={`/rutas/${id}`}>
+          Ver detalle
+        </Link>
+      )}
     </article>
   )
 }
