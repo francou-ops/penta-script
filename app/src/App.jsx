@@ -1,11 +1,12 @@
+import { Route, Routes } from 'react-router'
 import './App.css'
-import BannerPrincipal from './components/BannerPrincipal.jsx'
 import Encabezado from './components/Encabezado.jsx'
-import ListaEmprendimientos from './components/ListaEmprendimientos.jsx'
-import ListaRutas from './components/ListaRutas.jsx'
 import PiePagina from './components/PiePagina.jsx'
-import { emprendimientos } from './datos/emprendimientos.js'
-import { rutas } from './datos/rutas.js'
+import Inicio from './paginas/Inicio.jsx'
+import Rutas from './paginas/Rutas.jsx'
+import DetalleRuta from './paginas/DetalleRuta.jsx'
+import Emprendimientos from './paginas/Emprendimientos.jsx'
+import NoEncontrada from './paginas/NoEncontrada.jsx'
 
 export default function App() {
   const enlaces = ['Inicio', 'Rutas', 'Emprendimientos', 'Contacto']
@@ -14,12 +15,13 @@ export default function App() {
     <>
       <Encabezado enlaces={enlaces} paginaActual="Inicio" />
       <main id="contenido-principal">
-        <BannerPrincipal
-          titulo="Descubre la Araucanía sustentable"
-          subtitulo="Explora rutas reales del sur de Chile y encuentra servicios cercanos para preparar tu recorrido."
-        />
-        <ListaRutas rutas={rutas} />
-        <ListaEmprendimientos emprendimientos={emprendimientos} />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/rutas" element={<Rutas />} />
+          <Route path="/rutas/:id" element={<DetalleRuta />} />
+          <Route path="/emprendimientos" element={<Emprendimientos />} />
+          <Route path="*" element={<NoEncontrada />} />
+        </Routes>
       </main>
       <PiePagina />
     </>
