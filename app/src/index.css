@@ -1,1 +1,30 @@
 @import "../../css/styles.css";
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filtros label {
+  color: #153c29;
+  font-weight: bold;
+}
+
+.filtros select {
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #b7c2ba;
+  border-radius: 4px;
+  background-color: #fffdf8;
+  color: #153c29;
+  font: inherit;
+}
+
+.filtros select:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
