@@ -13,7 +13,7 @@ export default function DetalleRuta() {
   if (!ruta) {
     return (
       <section className="seccion-rutas">
-        <h2>Ruta no encontrada</h2>
+        <h1 tabIndex={-1}>Ruta no encontrada</h1>
         <p>No existe ninguna ruta con el identificador proporcionado.</p>
         <Link to="/rutas">Volver a la lista de rutas</Link>
       </section>
@@ -23,14 +23,17 @@ export default function DetalleRuta() {
   return (
     <>
       <section className="presentacion" aria-labelledby="titulo-principal">
-        <h1 id="titulo-principal">{ruta.nombre}</h1>
+        <h1 id="titulo-principal" tabIndex={-1}>{ruta.nombre}</h1>
       </section>
 
       <section className="seccion-rutas" id="detalle-ruta" aria-labelledby="titulo-detalle">
         <h2 id="titulo-detalle">Sobre esta ruta</h2>
 
         <article className="tarjeta-ruta">
-          <img src={ruta.imagen} alt={ruta.alt} />
+          <figure className="imagen-ruta">
+            <img src={ruta.imagen} alt={ruta.alt} />
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
           <p>
             <strong>Dificultad:</strong> {ruta.dificultad}
           </p>

@@ -23,8 +23,3 @@
   color: #153c29;
   font: inherit;
 }
-
-.filtros select:focus-visible {
-  outline: 3px solid #ffbf47;
-  outline-offset: 3px;
-}

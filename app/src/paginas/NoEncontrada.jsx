@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 export default function NoEncontrada() {
   return (
     <section className="seccion-rutas">
-      <h2>Página no encontrada</h2>
+      <h1 tabIndex={-1}>Página no encontrada</h1>
       <p>La dirección que escribiste no existe en EcoRuta.</p>
       <Link to="/" className="boton">Volver al inicio</Link>
     </section>

@@ -16,7 +16,8 @@ export default function ListaRutas() {
 
   return (
     <section className="seccion-rutas" aria-labelledby="titulo-lista-rutas">
-      <h2 id="titulo-lista-rutas">Rutas para descubrir</h2>
+      <h1 id="titulo-lista-rutas" tabIndex={-1}>Rutas para descubrir</h1>
+      <p className="aviso-imagenes">Fotografías ilustrativas de paisajes.</p>
 
       <div className="filtros">
         <label htmlFor="filtro-dificultad">Filtrar por dificultad</label>
@@ -49,6 +50,7 @@ export default function ListaRutas() {
             distanciaKm={ruta.distanciaKm}
             dificultad={ruta.dificultad}
             accesible={ruta.accesible}
+            nivelTitulo={2}
           />
         ))}
       </div>
