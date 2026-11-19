@@ -1,0 +1,140 @@
+{
+  "rutas": [
+    {
+      "id": 1,
+      "nombre": "Sendero Volcán Villarrica",
+      "imagen": "img/volcan-villarrica.jpg",
+      "alt": "Paisaje natural de la ruta del volcán Villarrica",
+      "distanciaKm": 12,
+      "dificultad": "moderada",
+      "descripcion": "Sendero de ascenso al volcán Villarrica, con vistas panorámicas de La Araucanía. Recorrido señalizado.",
+      "accesible": false
+    },
+    {
+      "id": 2,
+      "nombre": "Sendero Los Lagos",
+      "imagen": "img/sendero-los-lagos.jpg",
+      "alt": "Bosque nativo en Huerquehue",
+      "distanciaKm": 12,
+      "dificultad": "moderada",
+      "descripcion": "Recorrido por el Parque Nacional Huerquehue entre bosque nativo y lagunas.",
+      "accesible": false
+    },
+    {
+      "id": 3,
+      "nombre": "Mirador El Cañi",
+      "imagen": "img/reserva-el-cani.jpg",
+      "alt": "Bosque nativo de El Cañi",
+      "distanciaKm": 18,
+      "dificultad": "dificil",
+      "descripcion": "Ruta larga por la Reserva El Cañi hasta un mirador, con subidas pronunciadas.",
+      "accesible": false
+    },
+    {
+      "id": 4,
+      "nombre": "Sierra Nevada",
+      "imagen": "img/sierra-nevada.jpg",
+      "alt": "Paisaje del Parque Nacional Conguillío",
+      "distanciaKm": 20,
+      "dificultad": "dificil",
+      "descripcion": "Travesía exigente en el Parque Nacional Conguillío, para personas con experiencia en senderismo.",
+      "accesible": false
+    },
+    {
+      "id": 5,
+      "nombre": "Sendero Las Araucarias",
+      "imagen": "img/sendero-las-araucarias.jpg",
+      "alt": "Sendero entre araucarias",
+      "distanciaKm": 4,
+      "dificultad": "facil",
+      "descripcion": "Paseo corto entre araucarias, con pendientes suaves y espacios para descansar.",
+      "accesible": true
+    },
+    {
+      "id": 6,
+      "nombre": "Sendero Laguna Blanca",
+      "imagen": "img/sendero-laguna-blanca.jpg",
+      "alt": "Sendero de montaña en Malalcahuello",
+      "distanciaKm": 8,
+      "dificultad": "moderada",
+      "descripcion": "Sendero de montaña en la Reserva Nacional Malalcahuello hacia la laguna.",
+      "accesible": false
+    },
+    {
+      "id": 7,
+      "nombre": "Sendero del Bosque",
+      "imagen": "img/sendero-los-lagos.jpg",
+      "alt": "Sendero entre bosque nativo de Huerquehue",
+      "distanciaKm": 3,
+      "dificultad": "facil",
+      "descripcion": "Caminata breve entre bosque nativo en Huerquehue, apta para toda la familia.",
+      "accesible": true
+    },
+    {
+      "id": 8,
+      "nombre": "Sendero Laguna Verde",
+      "imagen": "img/sendero-laguna-blanca.jpg",
+      "alt": "Laguna rodeada de bosque en Malalcahuello",
+      "distanciaKm": 5,
+      "dificultad": "facil",
+      "descripcion": "Recorrido tranquilo hasta una laguna rodeada de bosque en Malalcahuello.",
+      "accesible": true
+    },
+    {
+      "id": 9,
+      "nombre": "Travesía de las Cumbres",
+      "imagen": "img/travesia-cumbre.jpg",
+      "alt": "Travesía de las cumbres",
+      "distanciaKm": 18,
+      "dificultad": "dificil",
+      "descripcion": "Travesía larga con subidas pronunciadas y terreno irregular, para personas con experiencia.",
+      "accesible": false
+    }
+  ],
+  "emprendimientos": [
+    {
+      "id": 1,
+      "nombre": "Artesanías de Pucón",
+      "rubro": "Artesanía local",
+      "comuna": "Pucón",
+      "enlace": "pages/vista_2.html"
+    },
+    {
+      "id": 2,
+      "nombre": "Hospedajes de Pucón",
+      "rubro": "Alojamiento cercano",
+      "comuna": "Pucón",
+      "enlace": "pages/vista_2.html"
+    },
+    {
+      "id": 3,
+      "nombre": "Guías de montaña",
+      "rubro": "Guía certificado",
+      "comuna": "Villarrica",
+      "enlace": "pages/vista_3.html"
+    }
+  ],
+  "resenas": [
+    {
+      "id": 1,
+      "rutaId": 1,
+      "autor": "Ana",
+      "nota": 5,
+      "comentario": "Muy bien señalizado."
+    },
+    {
+      "id": 2,
+      "rutaId": 5,
+      "autor": "Luis",
+      "nota": 4,
+      "comentario": "Corto y lindo."
+    },
+    {
+      "id": 3,
+      "rutaId": 3,
+      "autor": "Camila",
+      "nota": 5,
+      "comentario": "Hermosa vista, recomendada."
+    }
+  ]
+}
