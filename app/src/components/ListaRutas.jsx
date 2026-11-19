@@ -20,6 +20,7 @@ export default function ListaRutas({ rutas, titulo = "Rutas para descubrir" }) {
   return (
     <section className="seccion-rutas" id="rutas" aria-labelledby="titulo-rutas">
       <h2 id="titulo-rutas">{titulo}</h2>
+      <p className="aviso-imagenes">Fotografías ilustrativas de paisajes.</p>
 
       <div className="listado-rutas">
         {destacada && (

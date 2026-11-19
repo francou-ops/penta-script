@@ -9,11 +9,14 @@ export default function TarjetaRuta({
   distanciaKm,
   dificultad,
   accesible,
+  nivelTitulo = 3,
 }) {
+  const Titulo = nivelTitulo === 2 ? 'h2' : 'h3'
+
   return (
     <article className="tarjeta-ruta">
       <img src={imagen} alt={alt} />
-      <h3>{nombre}</h3>
+      <Titulo>{nombre}</Titulo>
       <dl className="datos-ruta">
         <div>
           <dt>Distancia</dt>
@@ -28,7 +31,7 @@ export default function TarjetaRuta({
       {/* Criterio C1 / Encargo D: Enlace con Link hacia /rutas/:id */}
       {id !== undefined && (
         <Link className="enlace-ruta" to={`/rutas/${id}`}>
-          Ver detalle
+          Ver detalle de {nombre}
         </Link>
       )}
     </article>

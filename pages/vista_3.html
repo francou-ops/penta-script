@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Ficha detallada de Travesía de las Cumbres — EcoRuta Temuco"
+    content="Catálogo de rutas difíciles y fichas individuales de EcoRuta Temuco"
   >
-  <title>Travesía de las Cumbres — EcoRuta Temuco</title>
+  <title>Rutas difíciles — EcoRuta Temuco</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -32,10 +33,8 @@
 
   <main tabindex="-1" id="contenido-principal">
     <section class="presentacion" aria-labelledby="titulo-principal">
-      <p>Parque Nacional Villarrica</p>
-      <h1 id="titulo-principal">
-        Travesía de las Cumbres
-      </h1>
+      <p>Región de La Araucanía</p>
+      <h1 id="titulo-principal">Rutas difíciles</h1>
       <nav class="filtros" aria-label="Rutas por dificultad">
         <a href="../index.html#rutas">Todas</a>
         <a href="vista_1.html">Fácil</a>
@@ -45,67 +44,121 @@
     </section>
 
     <section class="rutas-categoria" aria-labelledby="titulo-rutas-dificiles">
-      <h2 id="titulo-rutas-dificiles">Rutas difíciles</h2>
+      <h2 id="titulo-rutas-dificiles" tabindex="-1">Elige una ruta difícil</h2>
+      <p class="aviso-imagenes">Fotografías ilustrativas de paisajes.</p>
       <div class="rutas-grid">
-        <article class="tarjeta-ruta"><img src="../img/reserva-el-cani.jpg" alt="Mirador El Cañi"><p>Reserva El Cañi</p><h3>Mirador El Cañi</h3><p><strong>Distancia:</strong> 18 km</p><a class="enlace-ruta" href="#detalle-ruta">Ver detalle</a></article>
-        <article class="tarjeta-ruta"><img src="../img/sierra-nevada.jpg" alt="Sierra Nevada en Conguillío"><p>Parque Nacional Conguillío</p><h3>Sierra Nevada</h3><p><strong>Distancia:</strong> 20 km</p><a class="enlace-ruta" href="#detalle-ruta">Ver detalle</a></article>
-        <article class="tarjeta-ruta"><img src="../img/travesia-cumbre.jpg" alt="Cumbre de Villarrica"><p>Parque Nacional Villarrica</p><h3>Travesía de las Cumbres</h3><p><strong>Distancia:</strong> 18 km</p><a class="enlace-ruta" href="#detalle-ruta">Ver detalle</a></article>
+        <article class="tarjeta-ruta">
+          <img src="../img/reserva-el-cani.jpg" alt="Araucarias y lagunas entre cerros boscosos, con volcanes nevados al fondo.">
+          <p>Reserva El Cañi</p>
+          <h3>Mirador El Cañi</h3>
+          <p><strong>Distancia:</strong> 18 km</p>
+          <a class="enlace-ruta" href="#mirador-el-cani">Ver detalle de Mirador El Cañi</a>
+        </article>
+        <article class="tarjeta-ruta">
+          <img src="../img/sierra-nevada.jpg" alt="Ladera nevada con araucarias e instalaciones de un centro de esquí.">
+          <p>Parque Nacional Conguillío</p>
+          <h3>Sierra Nevada</h3>
+          <p><strong>Distancia:</strong> 20 km</p>
+          <a class="enlace-ruta" href="#sierra-nevada">Ver detalle de Sierra Nevada</a>
+        </article>
+        <article class="tarjeta-ruta">
+          <img src="../img/travesia-cumbre.jpg" alt="Terreno rocoso en altura con una persona y un volcán nevado al fondo.">
+          <p>Parque Nacional Villarrica</p>
+          <h3>Travesía de las Cumbres</h3>
+          <p><strong>Distancia:</strong> 18 km</p>
+          <a class="enlace-ruta" href="#travesia-de-las-cumbres">Ver detalle de Travesía de las Cumbres</a>
+        </article>
       </div>
     </section>
 
-    <section class="seccion-rutas" id="detalle-ruta" aria-labelledby="titulo-detalle">
-      <h2 id="titulo-detalle">Sobre esta ruta</h2>
-
-      <article class="tarjeta-ruta">
-        <img
-          src="../img/paisaje-ecoruta.jpg"
-          alt="Paisaje natural ilustrativo para la ruta de ejemplo"
-        >
-        <p><strong>Dificultad:</strong> Difícil</p>
-        <p>Travesía larga con subidas pronunciadas y terreno irregular. Una propuesta de ejemplo para representar una ruta exigente para personas con experiencia en senderismo.</p>
-
-        <dl class="datos-ruta">
-          <div>
-            <dt>Distancia</dt>
-            <dd>18 km</dd>
-          </div>
-
-          <div>
-            <dt>Tiempo estimado</dt>
-            <dd>8 horas</dd>
-          </div>
-
-          <div>
-            <dt>Punto de partida</dt>
-            <dd>Base de la montaña</dd>
-          </div>
-
-
-          <div>
-            <dt>Tipo de terreno</dt>
-            <dd>Roca y tierra, con pendientes pronunciadas</dd>
-          </div>
-        </dl>
-      </article>
-
-      <aside class="informacion-ruta" aria-label="Información para realizar la ruta">
-        <section class="tarjeta-clima" aria-labelledby="titulo-clima">
-          <h2 id="titulo-clima">Clima</h2>
-          <p><strong>22 °C</strong></p>
-          <p>Soleado, Pucón</p>
-          <p>Clima de ejemplo, sin actualización en tiempo real.</p>
-        </section>
-
-        <section class="tarjeta-emergencia" id="emergencia" aria-labelledby="titulo-emergencia">
-          <h2 id="titulo-emergencia">Contacto de emergencia</h2>
-          <p>
-            Comunícate con los servicios de emergencia si ocurre
-            un accidente durante el recorrido.
-          </p>
-          <a href="tel:133">Llamar al 133</a>
-        </section>
-      </aside>
-    </section>
+    <div id="detalle-ruta">
+      <section class="seccion-rutas detalle-ruta" aria-labelledby="mirador-el-cani">
+        <h2 id="mirador-el-cani" tabindex="-1">Mirador El Cañi</h2>
+        <article class="tarjeta-ruta">
+          <figure class="imagen-ruta">
+            <img src="../img/reserva-el-cani.jpg" alt="Araucarias y lagunas entre cerros boscosos, con volcanes nevados al fondo.">
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
+          <p>Reserva El Cañi</p>
+          <p>Recorrido de 18 km, de dificultad difícil.</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>18 km</dd></div>
+            <div><dt>Dificultad</dt><dd>Difícil</dd></div>
+          </dl>
+          <a class="enlace-ruta" href="#titulo-rutas-dificiles">Volver a rutas difíciles</a>
+        </article>
+        <aside class="informacion-ruta" aria-label="Información para Mirador El Cañi">
+          <section class="tarjeta-clima" data-lat="-39.27" data-lon="-71.76" aria-labelledby="clima-mirador-el-cani">
+            <h3 id="clima-mirador-el-cani">Clima de Mirador El Cañi</h3>
+            <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+            <p>Temperatura: <strong class="temperatura">--</strong></p>
+            <p>Viento: <strong class="viento">--</strong></p>
+            <p>Cielo: <strong class="cielo">--</strong></p>
+            <p class="aviso-clima" hidden></p>
+          </section>
+          <section class="tarjeta-emergencia" id="emergencia" aria-labelledby="titulo-emergencia">
+            <h3 id="titulo-emergencia">Contacto de emergencia</h3>
+            <p>Comunícate con los servicios de emergencia si ocurre un accidente durante el recorrido.</p>
+            <a href="tel:133">Llamar al 133</a>
+          </section>
+        </aside>
+      </section>
+      <section class="seccion-rutas detalle-ruta" aria-labelledby="sierra-nevada">
+        <h2 id="sierra-nevada" tabindex="-1">Sierra Nevada</h2>
+        <article class="tarjeta-ruta">
+          <figure class="imagen-ruta">
+            <img src="../img/sierra-nevada.jpg" alt="Ladera nevada con araucarias e instalaciones de un centro de esquí.">
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
+          <p>Parque Nacional Conguillío</p>
+          <p>Recorrido de 20 km, de dificultad difícil.</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>20 km</dd></div>
+            <div><dt>Dificultad</dt><dd>Difícil</dd></div>
+          </dl>
+          <a class="enlace-ruta" href="#titulo-rutas-dificiles">Volver a rutas difíciles</a>
+        </article>
+        <aside class="informacion-ruta" aria-label="Información para Sierra Nevada">
+          <section class="tarjeta-clima" data-lat="-38.65" data-lon="-71.64" aria-labelledby="clima-sierra-nevada">
+            <h3 id="clima-sierra-nevada">Clima de Sierra Nevada</h3>
+            <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+            <p>Temperatura: <strong class="temperatura">--</strong></p>
+            <p>Viento: <strong class="viento">--</strong></p>
+            <p>Cielo: <strong class="cielo">--</strong></p>
+            <p class="aviso-clima" hidden></p>
+          </section>
+        </aside>
+      </section>
+      <section class="seccion-rutas detalle-ruta" aria-labelledby="travesia-de-las-cumbres">
+        <h2 id="travesia-de-las-cumbres" tabindex="-1">Travesía de las Cumbres</h2>
+        <article class="tarjeta-ruta">
+          <figure class="imagen-ruta">
+            <img src="../img/travesia-cumbre.jpg" alt="Terreno rocoso en altura con una persona y un volcán nevado al fondo.">
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
+          <p>Parque Nacional Villarrica</p>
+          <p>Recorrido de 18 km, de dificultad difícil.</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>18 km</dd></div>
+            <div><dt>Dificultad</dt><dd>Difícil</dd></div>
+            <div><dt>Tiempo estimado</dt><dd>8 horas</dd></div>
+            <div><dt>Punto de partida</dt><dd>Base de la montaña</dd></div>
+            <div><dt>Tipo de terreno</dt><dd>Roca y tierra, con pendientes pronunciadas</dd></div>
+          </dl>
+          <a class="enlace-ruta" href="#titulo-rutas-dificiles">Volver a rutas difíciles</a>
+        </article>
+        <aside class="informacion-ruta" aria-label="Información para Travesía de las Cumbres">
+          <section class="tarjeta-clima" data-lat="-39.42" data-lon="-71.93" aria-labelledby="clima-travesia-de-las-cumbres">
+            <h3 id="clima-travesia-de-las-cumbres">Clima de Travesía de las Cumbres</h3>
+            <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+            <p>Temperatura: <strong class="temperatura">--</strong></p>
+            <p>Viento: <strong class="viento">--</strong></p>
+            <p>Cielo: <strong class="cielo">--</strong></p>
+            <p class="aviso-clima" hidden></p>
+          </section>
+        </aside>
+      </section>
+    </div>
 
     <section class="negocios" id="recomendaciones" aria-labelledby="titulo-recomendaciones">
       <h2 id="titulo-recomendaciones">
@@ -134,7 +187,9 @@
     </section>
   </main>
 
-  <footer class="pie" id="contacto">
+  <footer class="pie" id="contacto" tabindex="-1" aria-labelledby="titulo-contacto">
+    <h2 id="titulo-contacto">Contacto</h2>
+    <p><a href="mailto:ecoruta@gmail.com">ecoruta@gmail.com</a></p>
     <p>
       EcoRuta Temuco — Turismo sustentable y accesible
     </p>

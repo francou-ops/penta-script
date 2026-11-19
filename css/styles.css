@@ -23,10 +23,10 @@ a {
   color: inherit;
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid #ffbf47;
+:focus-visible {
+  outline: 3px solid #153c29;
   outline-offset: 3px;
+  box-shadow: 0 0 0 6px white;
 }
 
 .saltar-contenido {
@@ -55,8 +55,9 @@ button:focus-visible {
   min-height: 76px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   flex-wrap: wrap;
   padding: 20px 0;
   justify-content: center;
@@ -75,7 +76,7 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  order: 3;
+  justify-content: center;
   gap: 4px 16px;
   margin: 0;
   padding: 0;
@@ -170,6 +171,7 @@ button:focus-visible {
   align-items: start;
 }
 
+.seccion-rutas > h1,
 .seccion-rutas > h2 {
   grid-column: 1 / -1;
   margin-bottom: -16px;
@@ -189,6 +191,37 @@ button:focus-visible {
 
 .rutas-categoria h2 {
   margin-bottom: 20px;
+  scroll-margin-top: 1rem;
+}
+
+.aviso-imagenes {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #655e52;
+  font-size: 1rem;
+}
+
+.rutas-categoria .aviso-imagenes {
+  margin-bottom: 20px;
+}
+
+.detalle-ruta > h2 {
+  scroll-margin-top: 1rem;
+}
+
+.imagen-ruta {
+  margin: 0;
+}
+
+.imagen-ruta img {
+  max-height: 24rem;
+  object-fit: contain;
+}
+
+.imagen-ruta figcaption {
+  padding: 8px 24px;
+  color: #655e52;
+  font-size: 1rem;
 }
 
 .tarjeta-ruta {
@@ -211,6 +244,7 @@ button:focus-visible {
 }
 
 .tarjeta-ruta > p,
+.tarjeta-ruta > h2,
 .tarjeta-ruta > h3,
 .tarjeta-ruta > dl {
   margin-right: 24px;
@@ -221,10 +255,11 @@ button:focus-visible {
   margin-top: 24px;
   margin-bottom: 8px;
   color: #4f6c45;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
+.tarjeta-ruta h2,
 .tarjeta-ruta h3 {
   margin-bottom: 12px;
   font-size: 29px;
@@ -242,7 +277,7 @@ button:focus-visible {
 
 .seccion-rutas dt {
   color: #655e52;
-  font-size: 13px;
+  font-size: 1rem;
 }
 
 .seccion-rutas dd {
@@ -264,8 +299,14 @@ button:focus-visible {
   color: white;
 }
 
-.tarjeta-clima h2 {
+.tarjeta-clima h2,
+.tarjeta-clima h3 {
   color: white;
+}
+
+.tarjeta-clima h3,
+.tarjeta-emergencia h3 {
+  font-size: 1.5rem;
 }
 
 .tarjeta-clima strong {
@@ -274,7 +315,7 @@ button:focus-visible {
   line-height: 1.15;
 }
 
-.tarjeta-clima #cielo {
+.tarjeta-clima .cielo {
   display: inline-block;
   max-width: 100%;
 }
@@ -317,7 +358,7 @@ button:focus-visible {
   border-radius: 4px;
   background-color: #e9f3f6;
   color: #243b44;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .clima-ruta p {
@@ -406,7 +447,7 @@ button:focus-visible {
 .tarjeta-negocio p {
   margin-bottom: 6px;
   color: #4f6c45;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -433,7 +474,7 @@ button:focus-visible {
 .opinion h3 {
   margin-bottom: 3px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .opinion p {
@@ -451,9 +492,18 @@ button:focus-visible {
   margin: 0;
 }
 
+.pie h2 {
+  margin-bottom: 12px;
+  color: white;
+}
+
+.pie p + p {
+  margin-top: 12px;
+}
+
 @media (min-width: 640px) {
   .datos-ruta {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
   }
 
   .negocios {
@@ -480,6 +530,7 @@ button:focus-visible {
 
 
   .menu {
+    flex-direction: row;
     flex-wrap: nowrap;
     gap: 32px;
     padding: 0;
@@ -487,7 +538,6 @@ button:focus-visible {
 
   .enlaces {
     width: auto;
-    order: 0;
     gap: 28px;
   }
 

@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Ficha detallada de Sendero del Bosque — EcoRuta Temuco"
+    content="Catálogo de rutas fáciles y fichas individuales de EcoRuta Temuco"
   >
-  <title>Sendero del Bosque — EcoRuta Temuco</title>
+  <title>Rutas fáciles — EcoRuta Temuco</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -32,10 +33,8 @@
 
   <main tabindex="-1" id="contenido-principal">
     <section class="presentacion" aria-labelledby="titulo-principal">
-      <p>Parque Nacional Villarrica</p>
-      <h1 id="titulo-principal">
-        Sendero del Bosque
-      </h1>
+      <p>Región de La Araucanía</p>
+      <h1 id="titulo-principal">Rutas fáciles</h1>
       <nav class="filtros" aria-label="Rutas por dificultad">
         <a href="../index.html#rutas">Todas</a>
         <a href="vista_1.html" aria-current="page">Fácil</a>
@@ -45,67 +44,121 @@
     </section>
 
     <section class="rutas-categoria" aria-labelledby="titulo-rutas-faciles">
-      <h2 id="titulo-rutas-faciles">Rutas fáciles</h2>
+      <h2 id="titulo-rutas-faciles" tabindex="-1">Elige una ruta fácil</h2>
+      <p class="aviso-imagenes">Fotografías ilustrativas de paisajes.</p>
       <div class="rutas-grid">
-        <article class="tarjeta-ruta"><img src="../img/sendero-las-araucarias.jpg" alt="Sendero Las Araucarias"><p>Parque Nacional Villarrica</p><h3>Sendero Las Araucarias</h3><p><strong>Distancia:</strong> 4 km</p><a class="enlace-ruta" href="#detalle-ruta">Ver detalle</a></article>
-        <article class="tarjeta-ruta"><img src="../img/sendero-los-lagos.jpg" alt="Sendero del Bosque"><p>Parque Nacional Huerquehue</p><h3>Sendero del Bosque</h3><p><strong>Distancia:</strong> 3 km</p><a class="enlace-ruta" href="#detalle-ruta">Ver detalle</a></article>
-        <article class="tarjeta-ruta"><img src="../img/sendero-laguna-blanca.jpg" alt="Sendero Laguna Verde"><p>Reserva Nacional Malalcahuello</p><h3>Sendero Laguna Verde</h3><p><strong>Distancia:</strong> 5 km</p><a class="enlace-ruta" href="#detalle-ruta">Ver detalle</a></article>
+        <article class="tarjeta-ruta">
+          <img src="../img/sendero-las-araucarias.jpg" alt="Bosque de araucarias al pie de montañas con nieve.">
+          <p>Parque Nacional Villarrica</p>
+          <h3>Sendero Las Araucarias</h3>
+          <p><strong>Distancia:</strong> 4 km</p>
+          <a class="enlace-ruta" href="#sendero-las-araucarias">Ver detalle de Sendero Las Araucarias</a>
+        </article>
+        <article class="tarjeta-ruta">
+          <img src="../img/sendero-los-lagos.jpg" alt="Laguna de aguas tranquilas rodeada de árboles, con troncos en la orilla.">
+          <p>Parque Nacional Huerquehue</p>
+          <h3>Sendero del Bosque</h3>
+          <p><strong>Distancia:</strong> 3 km</p>
+          <a class="enlace-ruta" href="#sendero-del-bosque">Ver detalle de Sendero del Bosque</a>
+        </article>
+        <article class="tarjeta-ruta">
+          <img src="../img/sendero-laguna-blanca.jpg" alt="Laguna entre laderas boscosas, con una montaña nevada al fondo.">
+          <p>Reserva Nacional Malalcahuello</p>
+          <h3>Sendero Laguna Verde</h3>
+          <p><strong>Distancia:</strong> 5 km</p>
+          <a class="enlace-ruta" href="#sendero-laguna-verde">Ver detalle de Sendero Laguna Verde</a>
+        </article>
       </div>
     </section>
 
-    <section class="seccion-rutas" id="detalle-ruta" aria-labelledby="titulo-detalle">
-      <h2 id="titulo-detalle">Sobre esta ruta</h2>
-
-      <article class="tarjeta-ruta">
-        <img
-          src="../img/paisaje-ecoruta.jpg"
-          alt="Paisaje natural ilustrativo para la ruta de ejemplo"
-        >
-        <p><strong>Dificultad:</strong> Fácil</p>
-        <p>Paseo corto entre árboles, con un recorrido de pendientes suaves y espacios para descansar. Una propuesta de ejemplo para representar una caminata de baja dificultad.</p>
-
-        <dl class="datos-ruta">
-          <div>
-            <dt>Distancia</dt>
-            <dd>3 km</dd>
-          </div>
-
-          <div>
-            <dt>Tiempo estimado</dt>
-            <dd>1 hora</dd>
-          </div>
-
-          <div>
-            <dt>Punto de partida</dt>
-            <dd>Entrada del bosque</dd>
-          </div>
-
-
-          <div>
-            <dt>Tipo de terreno</dt>
-            <dd>Tierra compacta, con pendientes suaves</dd>
-          </div>
-        </dl>
-      </article>
-
-      <aside class="informacion-ruta" aria-label="Información para realizar la ruta">
-        <section class="tarjeta-clima" aria-labelledby="titulo-clima">
-          <h2 id="titulo-clima">Clima</h2>
-          <p><strong>22 °C</strong></p>
-          <p>Soleado, Pucón</p>
-          <p>Clima de ejemplo, sin actualización en tiempo real.</p>
-        </section>
-
-        <section class="tarjeta-emergencia" id="emergencia" aria-labelledby="titulo-emergencia">
-          <h2 id="titulo-emergencia">Contacto de emergencia</h2>
-          <p>
-            Comunícate con los servicios de emergencia si ocurre
-            un accidente durante el recorrido.
-          </p>
-          <a href="tel:133">Llamar al 133</a>
-        </section>
-      </aside>
-    </section>
+    <div id="detalle-ruta">
+      <section class="seccion-rutas detalle-ruta" aria-labelledby="sendero-las-araucarias">
+        <h2 id="sendero-las-araucarias" tabindex="-1">Sendero Las Araucarias</h2>
+        <article class="tarjeta-ruta">
+          <figure class="imagen-ruta">
+            <img src="../img/sendero-las-araucarias.jpg" alt="Bosque de araucarias al pie de montañas con nieve.">
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
+          <p>Parque Nacional Villarrica</p>
+          <p>Recorrido de 4 km, de dificultad fácil.</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>4 km</dd></div>
+            <div><dt>Dificultad</dt><dd>Fácil</dd></div>
+          </dl>
+          <a class="enlace-ruta" href="#titulo-rutas-faciles">Volver a rutas fáciles</a>
+        </article>
+        <aside class="informacion-ruta" aria-label="Información para Sendero Las Araucarias">
+          <section class="tarjeta-clima" data-lat="-39.41" data-lon="-71.95" aria-labelledby="clima-sendero-las-araucarias">
+            <h3 id="clima-sendero-las-araucarias">Clima de Sendero Las Araucarias</h3>
+            <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+            <p>Temperatura: <strong class="temperatura">--</strong></p>
+            <p>Viento: <strong class="viento">--</strong></p>
+            <p>Cielo: <strong class="cielo">--</strong></p>
+            <p class="aviso-clima" hidden></p>
+          </section>
+          <section class="tarjeta-emergencia" id="emergencia" aria-labelledby="titulo-emergencia">
+            <h3 id="titulo-emergencia">Contacto de emergencia</h3>
+            <p>Comunícate con los servicios de emergencia si ocurre un accidente durante el recorrido.</p>
+            <a href="tel:133">Llamar al 133</a>
+          </section>
+        </aside>
+      </section>
+      <section class="seccion-rutas detalle-ruta" aria-labelledby="sendero-del-bosque">
+        <h2 id="sendero-del-bosque" tabindex="-1">Sendero del Bosque</h2>
+        <article class="tarjeta-ruta">
+          <figure class="imagen-ruta">
+            <img src="../img/sendero-los-lagos.jpg" alt="Laguna de aguas tranquilas rodeada de árboles, con troncos en la orilla.">
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
+          <p>Parque Nacional Huerquehue</p>
+          <p>Recorrido de 3 km, de dificultad fácil.</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>3 km</dd></div>
+            <div><dt>Dificultad</dt><dd>Fácil</dd></div>
+            <div><dt>Tiempo estimado</dt><dd>1 hora</dd></div>
+            <div><dt>Punto de partida</dt><dd>Entrada del bosque</dd></div>
+            <div><dt>Tipo de terreno</dt><dd>Tierra compacta, con pendientes suaves</dd></div>
+          </dl>
+          <a class="enlace-ruta" href="#titulo-rutas-faciles">Volver a rutas fáciles</a>
+        </article>
+        <aside class="informacion-ruta" aria-label="Información para Sendero del Bosque">
+          <section class="tarjeta-clima" data-lat="-39.13" data-lon="-71.70" aria-labelledby="clima-sendero-del-bosque">
+            <h3 id="clima-sendero-del-bosque">Clima de Sendero del Bosque</h3>
+            <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+            <p>Temperatura: <strong class="temperatura">--</strong></p>
+            <p>Viento: <strong class="viento">--</strong></p>
+            <p>Cielo: <strong class="cielo">--</strong></p>
+            <p class="aviso-clima" hidden></p>
+          </section>
+        </aside>
+      </section>
+      <section class="seccion-rutas detalle-ruta" aria-labelledby="sendero-laguna-verde">
+        <h2 id="sendero-laguna-verde" tabindex="-1">Sendero Laguna Verde</h2>
+        <article class="tarjeta-ruta">
+          <figure class="imagen-ruta">
+            <img src="../img/sendero-laguna-blanca.jpg" alt="Laguna entre laderas boscosas, con una montaña nevada al fondo.">
+            <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
+          </figure>
+          <p>Reserva Nacional Malalcahuello</p>
+          <p>Recorrido de 5 km, de dificultad fácil.</p>
+          <dl class="datos-ruta">
+            <div><dt>Distancia</dt><dd>5 km</dd></div>
+            <div><dt>Dificultad</dt><dd>Fácil</dd></div>
+          </dl>
+          <a class="enlace-ruta" href="#titulo-rutas-faciles">Volver a rutas fáciles</a>
+        </article>
+        <aside class="informacion-ruta" aria-label="Información para Sendero Laguna Verde">
+          <section class="tarjeta-clima" data-lat="-38.47" data-lon="-71.58" aria-labelledby="clima-sendero-laguna-verde">
+            <h3 id="clima-sendero-laguna-verde">Clima de Sendero Laguna Verde</h3>
+            <p class="estado-clima" aria-live="polite">Sin datos aún.</p>
+            <p>Temperatura: <strong class="temperatura">--</strong></p>
+            <p>Viento: <strong class="viento">--</strong></p>
+            <p>Cielo: <strong class="cielo">--</strong></p>
+            <p class="aviso-clima" hidden></p>
+          </section>
+        </aside>
+      </section>
+    </div>
 
     <section class="negocios" id="recomendaciones" aria-labelledby="titulo-recomendaciones">
       <h2 id="titulo-recomendaciones">
@@ -134,7 +187,9 @@
     </section>
   </main>
 
-  <footer class="pie" id="contacto">
+  <footer class="pie" id="contacto" tabindex="-1" aria-labelledby="titulo-contacto">
+    <h2 id="titulo-contacto">Contacto</h2>
+    <p><a href="mailto:ecoruta@gmail.com">ecoruta@gmail.com</a></p>
     <p>
       EcoRuta Temuco — Turismo sustentable y accesible
     </p>
