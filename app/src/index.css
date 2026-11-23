@@ -1,5 +1,25 @@
 @import "../../css/styles.css";
 
+/* Las vistas de React distribuyen filtros y listados en todo el ancho. */
+.seccion-rutas {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.seccion-rutas > p,
+.seccion-rutas > .filtros {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.seccion-rutas > p > .enlace-ruta {
+  margin: 0;
+}
+
+.seccion-rutas > .negocios {
+  width: 100%;
+  margin: 0;
+}
+
 .filtros {
   display: flex;
   flex-wrap: wrap;

@@ -84,15 +84,33 @@ function DetalleDeRuta({ id }) {
                 <img src={ruta.imagen} alt={ruta.alt} />
                 <figcaption>Fotografía ilustrativa del paisaje.</figcaption>
               </figure>
-              <p>
-                <strong>Dificultad:</strong> {nombresDificultad[ruta.dificultad] || ruta.dificultad}
-              </p>
+              <p>Ubicación: {ruta.ubicacion || 'Información no disponible'}</p>
               {ruta.descripcion && <p>{ruta.descripcion}</p>}
 
               <dl className="datos-ruta">
                 <div>
                   <dt>Distancia</dt>
                   <dd>{ruta.distanciaKm} km</dd>
+                </div>
+                <div>
+                  <dt>Dificultad</dt>
+                  <dd>{nombresDificultad[ruta.dificultad] || ruta.dificultad}</dd>
+                </div>
+                <div>
+                  <dt>Tiempo estimado (ida y vuelta)</dt>
+                  <dd>{ruta.tiempoIdaVuelta || 'Información no disponible'}</dd>
+                </div>
+                <div>
+                  <dt>Punto de partida</dt>
+                  <dd>{ruta.puntoPartida || 'Información no disponible'}</dd>
+                </div>
+                <div>
+                  <dt>Altura máxima</dt>
+                  <dd>{ruta.alturaMaxima || 'Información no disponible'}</dd>
+                </div>
+                <div>
+                  <dt>Tipo de terreno</dt>
+                  <dd>{ruta.tipoTerreno || 'Información no disponible'}</dd>
                 </div>
                 <div>
                   <dt>Accesible</dt>
