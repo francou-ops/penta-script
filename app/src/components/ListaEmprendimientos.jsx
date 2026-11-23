@@ -15,7 +15,6 @@ export default function ListaEmprendimientos({ emprendimientos }) {
           nombre={emprendimiento.nombre}
           rubro={emprendimiento.rubro}
           comuna={emprendimiento.comuna}
-          enlace={emprendimiento.enlace}
         />
       ))}
     </section>
