@@ -208,7 +208,30 @@ interface Emprendimiento {
 
 ### Cómo levantar la API en local
 
-Esta sección se completará en la semana 12, cuando la API propia se construya con json-server.
+La API usa json-server 0.17.4 y sus datos están en `app/db.json`.
+
+La primera vez, dentro de `app`:
+
+```bash
+npm install
+```
+
+Después se abren dos terminales, las dos dentro de `app`:
+
+| Terminal | Comando | Dirección |
+|---|---|---|
+| API | `npm run api` | http://localhost:3001 |
+| Aplicación | `npm run dev` | http://localhost:5173 |
+
+Para comprobar la API, abrir http://localhost:3001/rutas.
+
+json-server modifica `db.json` al crear o borrar datos. Si solo estaban probando, antes del commit ejecutar desde la raíz:
+
+```bash
+git restore app/db.json
+```
+
+GitHub Pages no ejecuta json-server, así que la API solo funciona en local.
 
 ### API pública externa
 
