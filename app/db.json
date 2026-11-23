@@ -8,7 +8,12 @@
       "distanciaKm": 12,
       "dificultad": "moderada",
       "descripcion": "Sendero de ascenso al volcán Villarrica, con vistas panorámicas de La Araucanía. Recorrido señalizado.",
-      "accesible": false
+      "accesible": false,
+      "ubicacion": "Parque Nacional Villarrica",
+      "tiempoIdaVuelta": "6 horas",
+      "puntoPartida": "Sector Los Nevados",
+      "alturaMaxima": "2.840 m s. n. m.",
+      "tipoTerreno": "Ceniza volcánica, roca y tramos de nieve"
     },
     {
       "id": 2,
@@ -18,7 +23,12 @@
       "distanciaKm": 12,
       "dificultad": "moderada",
       "descripcion": "Recorrido por el Parque Nacional Huerquehue entre bosque nativo y lagunas.",
-      "accesible": false
+      "accesible": false,
+      "ubicacion": "Parque Nacional Huerquehue",
+      "tiempoIdaVuelta": "6 horas",
+      "puntoPartida": "Estacionamiento del lago Tinquilco",
+      "alturaMaxima": "1.350 m s. n. m.",
+      "tipoTerreno": "Tierra, raíces, piedras y escalones naturales"
     },
     {
       "id": 3,
@@ -28,7 +38,12 @@
       "distanciaKm": 18,
       "dificultad": "dificil",
       "descripcion": "Ruta larga por la Reserva El Cañi hasta un mirador, con subidas pronunciadas.",
-      "accesible": false
+      "accesible": false,
+      "ubicacion": "Santuario El Cañi, Pichares (Pucón)",
+      "tiempoIdaVuelta": "8 horas",
+      "puntoPartida": "Administración del Santuario El Cañi, Pichares",
+      "alturaMaxima": "1.550 m s. n. m.",
+      "tipoTerreno": "Tierra y raíces, con pendientes pronunciadas y tramos rocosos"
     },
     {
       "id": 4,
@@ -38,7 +53,12 @@
       "distanciaKm": 20,
       "dificultad": "dificil",
       "descripcion": "Travesía exigente en el Parque Nacional Conguillío, para personas con experiencia en senderismo.",
-      "accesible": false
+      "accesible": false,
+      "ubicacion": "Parque Nacional Conguillío",
+      "tiempoIdaVuelta": "8 horas",
+      "puntoPartida": "Sector Playa Linda, lago Conguillío",
+      "alturaMaxima": "2.000 m s. n. m.",
+      "tipoTerreno": "Bosque, roca y terreno de montaña"
     },
     {
       "id": 5,
@@ -48,7 +68,12 @@
       "distanciaKm": 4,
       "dificultad": "facil",
       "descripcion": "Paseo corto entre araucarias, con pendientes suaves y espacios para descansar.",
-      "accesible": true
+      "accesible": true,
+      "ubicacion": "Parque Nacional Villarrica",
+      "tiempoIdaVuelta": "2 horas",
+      "puntoPartida": "Guardería del sector Quetrupillán",
+      "alturaMaxima": "1.450 m s. n. m.",
+      "tipoTerreno": "Tierra compacta y raíces, con pendientes suaves"
     },
     {
       "id": 6,
@@ -58,7 +83,12 @@
       "distanciaKm": 8,
       "dificultad": "moderada",
       "descripcion": "Sendero de montaña en la Reserva Nacional Malalcahuello hacia la laguna.",
-      "accesible": false
+      "accesible": false,
+      "ubicacion": "Reserva Nacional Malalcahuello",
+      "tiempoIdaVuelta": "5 horas",
+      "puntoPartida": "Administración de la Reserva Malalcahuello",
+      "alturaMaxima": "1.780 m s. n. m.",
+      "tipoTerreno": "Bosque de araucarias y lengas, con escoriales volcánicos"
     },
     {
       "id": 7,
@@ -68,7 +98,12 @@
       "distanciaKm": 3,
       "dificultad": "facil",
       "descripcion": "Caminata breve entre bosque nativo en Huerquehue, apta para toda la familia.",
-      "accesible": true
+      "accesible": true,
+      "ubicacion": "Parque Nacional Huerquehue",
+      "tiempoIdaVuelta": "1 hora y 30 minutos",
+      "puntoPartida": "Acceso al lago Tinquilco",
+      "alturaMaxima": "950 m s. n. m.",
+      "tipoTerreno": "Tierra compacta, raíces y pasarelas de madera"
     },
     {
       "id": 8,
@@ -78,7 +113,12 @@
       "distanciaKm": 5,
       "dificultad": "facil",
       "descripcion": "Recorrido tranquilo hasta una laguna rodeada de bosque en Malalcahuello.",
-      "accesible": true
+      "accesible": true,
+      "ubicacion": "Reserva Nacional Malalcahuello",
+      "tiempoIdaVuelta": "2 horas y 30 minutos",
+      "puntoPartida": "Guardería del sector El Colorado",
+      "alturaMaxima": "1.550 m s. n. m.",
+      "tipoTerreno": "Sendero de tierra y bosque, con tramos pedregosos"
     },
     {
       "id": 9,
@@ -88,7 +128,12 @@
       "distanciaKm": 18,
       "dificultad": "dificil",
       "descripcion": "Travesía larga con subidas pronunciadas y terreno irregular, para personas con experiencia.",
-      "accesible": false
+      "accesible": false,
+      "ubicacion": "Parque Nacional Villarrica",
+      "tiempoIdaVuelta": "9 horas",
+      "puntoPartida": "Sector Los Nevados, Parque Nacional Villarrica",
+      "alturaMaxima": "2.200 m s. n. m.",
+      "tipoTerreno": "Roca suelta y tierra volcánica, con pendientes pronunciadas"
     }
   ],
   "emprendimientos": [
