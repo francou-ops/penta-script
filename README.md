@@ -16,20 +16,32 @@ Página web informativa sobre rutas y emprendimientos de turismo sustentable en 
 - HTML5 (estructura semántica)
 - CSS3 (diseño responsivo, mobile first)
 - JavaScript (widget de clima con API Open-Meteo)
-- Frameworks: no se utiliza un framework actualmente; el proyecto usa JavaScript vanilla.
-- API: Open-Meteo Forecast API.
+- React con Vite y React Router (aplicación en la carpeta `app`)
+- json-server 0.17.4 (API propia en local)
+- API externa: Open-Meteo Forecast API.
 
 ## Cómo ejecutar el proyecto
 
-No hay que instalar nada. Se clona el repositorio y se abre `index.html` en el navegador.
+Primero se clona el repositorio:
 
 ```bash
 git clone https://github.com/francou-ops/penta-script.git
 ```
 
-También se puede abrir con la extensión Live Server de VS Code.
+**Sitio estático:** no hay que instalar nada. Se abre `index.html` en el navegador o con la extensión Live Server de VS Code.
 
-## Páginas
+**Aplicación React:** necesita Node.js y la API propia. Los pasos están en [Cómo levantar la API en local](#cómo-levantar-la-api-en-local).
+
+## Páginas de la aplicación React
+
+| Página | Dirección | Contenido |
+|--------|-----------|-----------|
+| Inicio | `#/` | Tres rutas destacadas |
+| Rutas | `#/rutas` | Las nueve rutas con filtro por dificultad |
+| Detalle | `#/rutas/:id` | Datos de la ruta y sus reseñas |
+| Emprendimientos | `#/emprendimientos` | Emprendimientos con filtro por comuna |
+
+## Páginas del sitio estático
 
 | Página | Archivo | Contenido |
 |--------|---------|-----------|
@@ -45,11 +57,11 @@ La ficha moderada consulta Open-Meteo y muestra temperatura, viento, cielo, esta
 
 ## Estado del proyecto
 
-- Sprint actual: Sprint 2
+- Sprint actual: Sprint 3
 - Interfaz responsive con enfoque mobile first.
 - Tres vistas de rutas por dificultad, con nueve rutas en la portada.
 - Widget de clima integrado con la API pública Open-Meteo.
-- JavaScript integrado para consultar y mostrar datos dinámicos.
+- Aplicación React conectada a la API propia: rutas, emprendimientos y reseñas.
 
 ## Tablero Trello
 
@@ -73,6 +85,14 @@ penta-script/
 ├── js/
 │   └── main.js          # Consulta y presentación del clima
 ├── img/                # Imágenes del sitio
+├── app/                # Aplicación React
+│   ├── db.json         # Datos de la API propia
+│   ├── package.json    # Dependencias y scripts
+│   ├── public/img/     # Imágenes que usa la aplicación
+│   └── src/
+│       ├── api.js      # Dirección de la API
+│       ├── components/ # Componentes reutilizables
+│       └── paginas/    # Vistas de la aplicación
 ├── .gitignore
 └── README.md
 ```
