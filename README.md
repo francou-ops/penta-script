@@ -109,7 +109,7 @@ Si el contrato cambia, se cambia primero aquí y después en el código.
 | Recurso | La interfaz lo… | Vistas que lo usan | Para qué le sirve al usuario |
 |---|---|---|---|
 | `rutas` | solo lee | Inicio, ListaRutas, DetalleRuta | Comparar rutas por distancia, dificultad y accesibilidad para elegir según el nivel. |
-| `emprendimientos` | solo lee | Inicio, ListaEmprendimientos | Encontrar servicios cercanos a una ruta antes de iniciar el recorrido. |
+| `emprendimientos` | solo lee | Emprendimientos, ListaEmprendimientos | Encontrar servicios cercanos a una ruta antes de iniciar el recorrido. |
 | `resenas` | lee, crea y borra | DetalleRuta, FormularioResena | Leer opiniones de otros visitantes y dejar una reseña después del recorrido. Cualquier visitante puede borrar reseñas desde DetalleRuta. |
 
 ### Modelo de datos
@@ -221,7 +221,7 @@ interface Emprendimiento {
 |---|---|---|---|---|---|
 | `GET` | `/rutas` | nada | arreglo de rutas | 200 | Inicio, ListaRutas |
 | `GET` | `/rutas/:id` | nada | una ruta | 200 · 404 | DetalleRuta |
-| `GET` | `/emprendimientos` | nada | arreglo de emprendimientos | 200 | Inicio, ListaEmprendimientos |
+| `GET` | `/emprendimientos` | nada | arreglo de emprendimientos | 200 | Emprendimientos, ListaEmprendimientos |
 | `GET` | `/resenas?rutaId=:id` | nada | arreglo de resenas de una ruta | 200 | DetalleRuta |
 | `POST` | `/resenas` | `{ rutaId, autor, nota, comentario }`; los tres primeros campos son obligatorios y `comentario` es opcional | resena creada con su `id` | 201 | FormularioResena |
 | `DELETE` | `/resenas/:id` | nada; el `id` va en la URL | `{}` si se elimina o error si no existe | 200 · 404 | DetalleRuta; cualquier visitante puede borrar una reseña |
