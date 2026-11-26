@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Route, Routes, useLocation } from 'react-router'
 import './App.css'
+import AvisoPublicacion from './components/AvisoPublicacion.jsx'
 import Encabezado from './components/Encabezado.jsx'
 import PiePagina from './components/PiePagina.jsx'
 import Inicio from './paginas/Inicio.jsx'
@@ -42,6 +43,7 @@ export default function App() {
     <>
       <Encabezado />
       <main id="contenido-principal" ref={contenidoPrincipal} tabIndex={-1}>
+        <AvisoPublicacion />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/rutas" element={<ListaRutas />} />
