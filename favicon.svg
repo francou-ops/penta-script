@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>EcoRuta</title>
+  <rect width="64" height="64" rx="12" fill="#153c29"/>
+  <circle cx="47" cy="17" r="6" fill="#e6ae55"/>
+  <path d="M8 45 26 16l14 22 7-10 10 17Z" fill="#f3eddf"/>
+  <path d="M31 57c-12-10 17-8 3-18" fill="none" stroke="#f3eddf" stroke-width="4" stroke-linecap="round"/>
+</svg>

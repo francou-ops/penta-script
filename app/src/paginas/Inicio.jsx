@@ -34,8 +34,8 @@ export default function Inicio() {
         subtitulo="Explora rutas reales del sur de Chile y encuentra servicios cercanos para preparar tu recorrido."
       />
 
-      {cargando && <p className="lista estado" role="status">Cargando rutas…</p>}
-      {error && <p className="lista estado error" role="alert">{error}</p>}
+      {cargando && <p className="estado estado-inicio" role="status">Cargando rutas…</p>}
+      {error && <p className="estado estado-inicio error" role="alert">{error}</p>}
       {!cargando && !error && <ListaRutas rutas={rutas.slice(0, 3)} />}
 
       <LuzDelDia />
