@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router'
 import BannerPrincipal from '../components/BannerPrincipal.jsx'
 import ListaRutas from '../components/ListaRutas.jsx'
+import LuzDelDia from '../components/LuzDelDia.jsx'
 import { API_URL } from '../api.js'
 
 export default function Inicio() {
@@ -36,6 +37,8 @@ export default function Inicio() {
       {cargando && <p className="lista estado" role="status">Cargando rutas…</p>}
       {error && <p className="lista estado error" role="alert">{error}</p>}
       {!cargando && !error && <ListaRutas rutas={rutas.slice(0, 3)} />}
+
+      <LuzDelDia />
 
       <p>
         <Link to="/rutas" className="enlace-ruta">
