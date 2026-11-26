@@ -135,3 +135,52 @@
   min-height: 1.4em;
   font-size: 14px;
 }
+
+/* ---------- API externa y publicación (semana 13) ---------- */
+/* LuzDia puede usar .luz-dia; .clima conserva el nombre del ejemplo del taller. */
+.luz-dia,
+.clima {
+  width: 92%;
+  max-width: 1120px;
+  margin: 24px auto;
+  padding: 20px;
+  border: 1px solid #b9c7bc;
+  border-radius: 10px;
+  background: #f2f7f3;
+  color: #153c29;
+}
+
+.luz-dia h2,
+.clima h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.luz-dia p,
+.clima p {
+  margin: 8px 0;
+}
+
+.luz-dia .fuente,
+.clima .fuente {
+  font-size: 15px;
+  color: #33443a;
+}
+
+.luz-dia .fuente a,
+.clima .fuente a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.aviso-publicacion {
+  width: 92%;
+  max-width: 1120px;
+  margin: 20px auto;
+  padding: 16px 20px;
+  border: 1px solid #c99520;
+  border-left-width: 5px;
+  border-radius: 8px;
+  background: #fff3cd;
+  color: #664d03;
+}
