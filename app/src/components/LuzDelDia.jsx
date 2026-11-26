@@ -57,7 +57,15 @@ export default function LuzDelDia() {
           <p>Puesta del sol: {luz.atardecer} hrs</p>
           <p>Planifica tu regreso antes de las {luz.atardecer} hrs para evitar caminar sin luz natural.</p>
           <p className="fuente">
-            Datos de <a href="https://open-meteo.com/">Open-Meteo</a>
+            Datos de{' '}
+            <a
+              href="https://open-meteo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Sitio web oficial de Open-Meteo (se abre en una pestaña nueva)"
+            >
+              Open-Meteo
+            </a>
           </p>
         </>
       )}
