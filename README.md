@@ -257,9 +257,9 @@ GitHub Pages no ejecuta json-server, así que la API solo funciona en local.
 
 | Dato | Valor |
 |---|---|
-| Nombre | Open-Meteo Forecast API |
+| Nombre | Open-Meteo Forecast API (Luz del día) |
 | URL base | `https://api.open-meteo.com/v1/` |
-| Endpoint que usaremos | `/forecast?latitude={latitud}&longitude={longitud}&current=temperature_2m,wind_speed_10m,weather_code` |
+| Endpoint que usaremos | `/forecast?latitude=-39.42&longitude=-71.93&daily=sunrise,sunset&timezone=America/Santiago&forecast_days=1` |
 | Requiere autenticación | No |
-| Vista en que aparece | Inicio y vistas de rutas con widget de clima |
-| Para qué le sirve al usuario | Consultar temperatura, viento y estado del cielo para preparar el recorrido. |
+| Vista en que aparece | Inicio |
+| Para qué le sirve al usuario | Consultar la hora de salida y puesta del sol para planificar el regreso antes de que anochezca. |
