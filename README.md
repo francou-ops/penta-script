@@ -69,7 +69,8 @@ Enlace al tablero: https://trello.com/b/XcS33uFd/penta-script
 
 ## Enlace de despliegue
 
-(https://francou-ops.github.io/penta-script/)
+- Sitio estático: https://francou-ops.github.io/penta-script/
+- Aplicación React: https://francou-ops.github.io/penta-script/aplicacion/
 
 ## Estructura actual del repositorio
 
