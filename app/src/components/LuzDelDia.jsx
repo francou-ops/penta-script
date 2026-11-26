@@ -8,8 +8,8 @@ const URL_LUZ_DIA =
   '&forecast_days=1'
 
 function extraerHora(fechaIso) {
-  if (typeof fechaIso !== 'string' || !fechaIso.includes('T')) {
-    return '--:--'
+  if (typeof fechaIso !== 'string' || !/^\d{4}-\d{2}-\d{2}T([01]\d|2[0-3]):[0-5]\d$/.test(fechaIso)) {
+    throw new Error('Open-Meteo devolvió un horario inválido')
   }
   return fechaIso.split('T')[1]
 }
@@ -48,6 +48,7 @@ export default function LuzDelDia() {
   return (
     <section className="clima" aria-labelledby="titulo-luz-dia">
       <h2 id="titulo-luz-dia">Luz del día en la ruta</h2>
+      <p>Sector del volcán Villarrica. Hora local de Chile.</p>
       {cargando && <p className="estado" role="status">Cargando luz del día…</p>}
       {error && <p className="estado error" role="alert">{error}</p>}
       {luz && (
