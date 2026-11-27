@@ -54,6 +54,12 @@
   font-weight: 700;
 }
 
+.estado-inicio {
+  width: 92%;
+  max-width: 1120px;
+  margin: 24px auto;
+}
+
 .tarjeta.detalle {
   max-width: 640px;
 }
@@ -86,15 +92,40 @@
   color: #b7791f;
 }
 
+.borrar,
+.formulario .boton {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 10px 16px;
+  border: 1.5px solid #153c29;
+  border-radius: 8px;
+  background: #153c29;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
 .borrar {
   margin-top: 6px;
-  padding: 4px 10px;
-  border: 1.5px solid #a3261b;
-  border-radius: 16px;
+  border-color: #a3261b;
   background: #ffffff;
   color: #a3261b;
-  font-weight: 700;
-  cursor: pointer;
+}
+
+.borrar:hover:not(:disabled) {
+  background: #fcece8;
+}
+
+.formulario .boton:hover:not(:disabled) {
+  background: #0c2b1b;
+}
+
+.borrar:disabled,
+.formulario .boton:disabled {
+  opacity: 0.65;
+  cursor: wait;
 }
 
 .formulario {
@@ -127,8 +158,6 @@
 .formulario .boton {
   justify-self: start;
   margin-top: 8px;
-  background: #ffffff;
-  cursor: pointer;
 }
 
 .formulario .mensaje {
